@@ -1,3 +1,3 @@
 # Open Source Microfactory Simulation
 
-Factory Intelligence Platform is the first major platform project from the Open Factory Initiative. FactorySimPy is a light-weight Python library for modeling and discrete-event simulation of manufacturing systems. IndustryFusion is the open source IIoT connectivity solution for smart products and smart factories
+Factory Intelligence Platform is the first major platform project from the Open Factory Initiative. FactorySimPy is a light-weight Python library for modeling and discrete-event simulation of manufacturing systems. IndustryFusion is the open source IIoT connectivity solution for smart products and smart factories. OpenFactory is a deployment and coordination platform for the physical world. The Open Factory Twin (OFacT) project aims to provide a digital twin for production and logistics environments. 
