@@ -1,0 +1,54 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5" pages="2">
+  <diagram name="model-based-enterprise-vision" id="k7L0cZ12b48MnHqwKU7y">
+    <mxGraphModel dx="1111" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5qDJKk2ZR2ZZbrGVZk2a-1" value="" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.pentagon" vertex="1" parent="1">
+          <mxGeometry x="170" y="65" width="480" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="L69CzyrzADCPUKIeVfnG-1" value="Model Based Enterprise" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5qDJKk2ZR2ZZbrGVZk2a-2" value="Design &amp;amp; Analysis" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;" vertex="1" parent="1">
+          <mxGeometry x="335" y="20" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5qDJKk2ZR2ZZbrGVZk2a-3" value="" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;" vertex="1" parent="1">
+          <mxGeometry x="94" y="178" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5qDJKk2ZR2ZZbrGVZk2a-4" value="" style="html=1;whiteSpace=wrap;aspect=fixed;shape=isoRectangle;" vertex="1" parent="1">
+          <mxGeometry x="571" y="178" width="150" height="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="model-based-development-process" id="EPfHRrZNERf-0xlptFQh">
+    <mxGraphModel dx="1111" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="4qHdTWF6PVtfzJb-cyQM-0" />
+        <mxCell id="4qHdTWF6PVtfzJb-cyQM-1" parent="4qHdTWF6PVtfzJb-cyQM-0" />
+        <mxCell id="4qHdTWF6PVtfzJb-cyQM-2" value="Central Model" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="4qHdTWF6PVtfzJb-cyQM-1">
+          <mxGeometry x="160" y="240" width="400" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="XFnuLWeehhoO4JnJHrh4-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Simulink/Stateflow&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4qHdTWF6PVtfzJb-cyQM-1">
+          <mxGeometry x="160" y="300" width="390" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="XFnuLWeehhoO4JnJHrh4-2" value="Embedded Software" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="4qHdTWF6PVtfzJb-cyQM-1">
+          <mxGeometry x="160" y="525" width="400" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XFnuLWeehhoO4JnJHrh4-3" value="Simulators" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="4qHdTWF6PVtfzJb-cyQM-1">
+          <mxGeometry x="640" y="280" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XFnuLWeehhoO4JnJHrh4-4" value="MATLAB" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="4qHdTWF6PVtfzJb-cyQM-1">
+          <mxGeometry x="160" y="40" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XFnuLWeehhoO4JnJHrh4-5" value="ATLAS" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="4qHdTWF6PVtfzJb-cyQM-1">
+          <mxGeometry x="440" y="40" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="XFnuLWeehhoO4JnJHrh4-6" value="Formal S/W Test" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="4qHdTWF6PVtfzJb-cyQM-1">
+          <mxGeometry x="720" y="525" width="200" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
