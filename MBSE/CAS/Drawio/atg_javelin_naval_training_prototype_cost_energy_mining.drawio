@@ -1,0 +1,363 @@
+<mxfile host="app.diagrams.net" modified="2026-09-11T00:00:00.000Z" agent="OpenAI Codex" version="31.4.2" type="device" compressed="false">
+  <diagram id="cost-schedule-estimate" name="01 - Cost and Schedule Executive Estimate">
+    <mxGraphModel dx="1900" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="c1-title" value="ATG Javelin — Two-Seat Naval Training Prototype: Physical Purchasing-Power Estimate" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#1f4e78;strokeColor=#163a5c;fontColor=#ffffff;fontStyle=1;fontSize=20;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="20" width="1870" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-scope" value="CONCEPTUAL PROGRAM ESTIMATE&#xa;One airworthy two-seat training demonstrator, open interfaces, industrial high-strength alternatives, ground/HIL rigs, and a staged test campaign.&#xa;Not a type-certification quote, naval-operational approval, weapons program, or production contract." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="100" width="900" height="86" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-reference" value="REFERENCE CONTEXT&#xa;ATG Javelin public page: historical two-seat prototype / trainer concept; status reported as canceled.&#xa;Public dimensions and performance are context only and remain TBD for a new design baseline." link="https://en.wikipedia.org/wiki/ATG_Javelin" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#5a4a00;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="965" y="100" width="930" height="86" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c1-unit" value="PRIMARY UNIT OF ACCOUNT&#xa;1 SET = purchasing power of 1 metric tonne of the selected high-strength structural-steel reference.&#xa;All figures below are ranges in SET, physical material equivalents, months, and GWh. No international currency is displayed." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontStyle=1;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="215" width="1870" height="74" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c1-lean" value="LEAN DEMONSTRATOR&#xa;&#xa;35,000–55,000 SET&#xa;24–30 months with AI&#xa;0.5–0.8 GWh program energy&#xa;One demonstrator; limited qualification" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e2f0d9;strokeColor=#70ad47;fontColor=#274e27;fontStyle=1;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="345" width="430" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-base" value="BASE RECOMMENDATION&#xa;&#xa;50,000–90,000 SET&#xa;30–42 months with AI&#xa;0.8–1.5 GWh program energy&#xa;Airworthy prototype + rigs + staged tests" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontStyle=1;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="495" y="345" width="470" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-qual" value="QUALIFICATION-READY&#xa;&#xa;90,000–150,000 SET&#xa;42–60 months with AI&#xa;1.5–3.0 GWh program energy&#xa;Expanded ground and flight evidence" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontStyle=1;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="345" width="430" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-cert" value="OUTSIDE THIS ESTIMATE&#xa;&#xa;Full certification, fleet introduction, naval-operational release, or new engine development can add major schedule and resource gates.&#xa;AI cannot remove physical test or authority gates." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f5f5f5;strokeColor=#999999;fontColor=#333333;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1475" y="345" width="420" height="180" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c1-allocation-title" value="BASE PROGRAM ALLOCATION — 50,000–90,000 SET" style="text;html=0;strokeColor=none;fillColor=none;fontColor=#1f4e78;fontStyle=1;fontSize=15;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="585" width="640" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-eng" value="Systems engineering, requirements, CAD, MDAO, digital thread&#xa;8,000–15,000 SET" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="635" width="355" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-prop" value="Propulsion, avionics, flight-control and safety-critical integration&#xa;12,000–22,000 SET" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e2f0d9;strokeColor=#70ad47;fontColor=#274e27;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="405" y="635" width="355" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-airframe" value="Airframe, high-strength materials, tooling and assembly&#xa;15,000–25,000 SET" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e2f0d9;strokeColor=#70ad47;fontColor=#274e27;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="785" y="635" width="355" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-rigs" value="Simulator, ground rigs, HIL, instrumentation and data systems&#xa;8,000–15,000 SET" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e4dfec;strokeColor=#8064a2;fontColor=#403252;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1165" y="635" width="355" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-test" value="Staged flight-test preparation, safety, quality, reserves&#xa;7,000–13,000 SET" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1545" y="635" width="350" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c1-flow-title" value="ACCELERATED DEVELOPMENT FLOW" style="text;html=0;strokeColor=none;fillColor=none;fontColor=#1f4e78;fontStyle=1;fontSize=15;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="790" width="510" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-flow" value="Open requirements and interfaces → AI-assisted CAD / MDAO → supplier and component qualification → ground and HIL rigs → prototype assembly → staged test readiness → controlled demonstration" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f5f5f5;strokeColor=#999999;fontColor=#333333;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="840" width="1130" height="84" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-rule" value="AI schedule effect: typically material for documentation, code scaffolding, simulation setup, traceability, and anomaly triage; limited for procurement, manufacturing lead times, safety reviews, and physical testing." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#5a4a00;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="840" width="705" height="84" as="geometry"/>
+        </mxCell>
+        <mxCell id="c1-note" value="Planning confidence: Class 4 conceptual estimate. Expected uncertainty is high until controlled CAD, bill of materials, supplier quotations, engine availability, certification basis, and test-site assumptions are established." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f5f5f5;strokeColor=#999999;fontColor=#333333;fontSize=11;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="975" width="1870" height="60" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="metal-ppp-energy" name="02 - Metal PPP and Energy Equivalents">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1850" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="m-title" value="Physical Purchasing-Power Model — Metals, Energy, and Export Equivalents" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#1f4e78;strokeColor=#163a5c;fontColor=#ffffff;fontStyle=1;fontSize=19;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="20" width="1800" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-formula" value="FORMULA&#xa;SET = total program burden divided by the reference purchasing power of 1 tonne of high-strength structural steel.&#xa;Commodity-equivalent tonnes = SET divided by the selected commodity-to-steel purchasing-power ratio.&#xa;The result is a value-equivalent export volume, not the prototype bill of materials." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="100" width="880" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-date" value="PLANNING SNAPSHOT&#xa;Reference date: 2026-09-11&#xa;Market ranges are indicative and regional. Use local landed prices and supplier quotes before budget approval." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#5a4a00;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="945" y="100" width="880" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m-steel" value="STRUCTURAL STEEL&#xa;Reference = 1.0 SET per tonne&#xa;&#xa;Planning band: 1.0 SET / t&#xa;Basis: high-strength industrial structural steel, locally landed" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="260" width="390" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-copper" value="REFINED COPPER&#xa;≈ 17–21 SET per tonne&#xa;&#xa;Base program export equivalent&#xa;2,300–5,100 t copper" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4b183;strokeColor=#c65911;fontColor=#6b2f00;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="465" y="260" width="390" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-alum" value="PRIMARY OR QUALIFIED RECYCLED ALUMINUM&#xa;≈ 3.5–4.8 SET per tonne&#xa;&#xa;Base program export equivalent&#xa;10,400–25,700 t aluminum" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e7e6e6;strokeColor=#7f7f7f;fontColor=#333333;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="905" y="260" width="390" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-cfrp" value="FINISHED CARBON-FIBER COMPOSITE&#xa;≈ 45–85 SET per tonne&#xa;&#xa;Base program export equivalent&#xa;590–2,000 t finished CFRP" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d9d9d9;strokeColor=#595959;fontColor=#1f1f1f;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1345" y="260" width="480" height="150" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m-base" value="BASE PROGRAM: 50,000–90,000 SET" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontStyle=1;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="465" width="500" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-export" value="EXPORT EQUIVALENCE EXAMPLES&#xa;If the program were represented by one commodity only:&#xa;• 50,000–90,000 t steel, or&#xa;• 2,300–5,100 t refined copper, or&#xa;• 10,400–25,700 t aluminum, or&#xa;• 590–2,000 t finished CFRP.&#xa;These are economic purchasing-power analogies, not procurement instructions." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f5f5f5;strokeColor=#999999;fontColor=#333333;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="585" y="445" width="1240" height="105" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m-mine-title" value="MINING EXPORT SENSITIVITY — COPPER EXAMPLE" style="text;html=0;strokeColor=none;fillColor=none;fontColor=#1f4e78;fontStyle=1;fontSize=15;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="605" width="650" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-concentrate" value="Refined copper equivalent&#xa;2,300–5,100 t" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4b183;strokeColor=#c65911;fontColor=#6b2f00;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="655" width="280" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-conc2" value="Indicative concentrate equivalent&#xa;≈ 10,000–23,000 t&#xa;Assumption: 25% Cu concentrate and 90% payable recovery" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4b183;strokeColor=#c65911;fontColor=#6b2f00;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="655" width="350" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-ore" value="Indicative run-of-mine ore equivalent&#xa;≈ 270,000–600,000 t&#xa;Assumption: 1.0% Cu head grade and 85% recovery" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4b183;strokeColor=#c65911;fontColor=#6b2f00;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="785" y="655" width="360" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-mine-note" value="Grade, recovery, smelter terms, royalties, energy intensity, logistics, and local premiums can move these ranges substantially. The copper conversion is illustrative and must not be used as a reserve or export forecast." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#5a4a00;fontSize=11;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="655" width="615" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-me1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#c65911;endArrow=block;" edge="1" parent="1" source="m-concentrate" target="m-conc2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-me2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#c65911;endArrow=block;" edge="1" parent="1" source="m-conc2" target="m-ore">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="m-energy-title" value="ENERGY PRODUCTION EQUIVALENCE" style="text;html=0;strokeColor=none;fillColor=none;fontColor=#1f4e78;fontStyle=1;fontSize=15;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="820" width="560" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-embodied" value="Illustrative actual prototype material content&#xa;Steel: 2.0–3.0 t&#xa;Aluminum: 0.7–1.2 t&#xa;Copper: 0.20–0.35 t&#xa;Finished CFRP: 0.6–1.0 t&#xa;Other materials and consumables: TBD" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="870" width="390" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-embodied-energy" value="Material embodied-energy planning band&#xa;≈ 50–120 MWh&#xa;Range depends strongly on recycled content, fiber route, resin, and supplier process." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#5a4a00;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="465" y="870" width="390" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-program-energy" value="Program energy burden&#xa;Lean: 0.5–0.8 GWh&#xa;Base: 0.8–1.5 GWh&#xa;Qualification-ready: 1.5–3.0 GWh&#xa;Includes manufacturing, simulation/HPC, rigs, facility use, and staged testing." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="905" y="870" width="430" height="175" as="geometry"/>
+        </mxCell>
+        <mxCell id="m-plant" value="1 MW continuous production equivalent&#xa;0.5–1.5 GWh = approximately 21–63 days of output&#xa;This is a resource-intensity comparison, not a price conversion." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e4dfec;strokeColor=#8064a2;fontColor=#403252;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1385" y="870" width="440" height="175" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="ai-accelerated-plan" name="03 - AI-Accelerated Development Plan">
+    <mxGraphModel dx="1800" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="a-title" value="Accelerated Development with AI — Schedule, Work Packages, and Gates" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#1f4e78;strokeColor=#163a5c;fontColor=#ffffff;fontStyle=1;fontSize=19;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="20" width="1800" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-schedule" value="SCHEDULE RANGE&#xa;Conventional conceptual path: 42–60 months.&#xa;AI-assisted base path: 30–42 months to a controlled prototype demonstration.&#xa;Estimated total-program time reduction: roughly 10–20%; knowledge-work sub-tasks may reduce more." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="105" width="880" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-boundary" value="AI BOUNDARY&#xa;AI may accelerate analysis, documentation, simulation setup, coding support, traceability, and anomaly triage.&#xa;AI cannot authorize flight, testing, safety release, configuration changes, or physical actuation." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="945" y="105" width="880" height="95" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="a-p1" value="0–3 months&#xa;Mission, constraints,&#xa;requirements, source review,&#xa;open-interface baseline" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="300" width="220" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-p2" value="3–8 months&#xa;Architecture, CAD,&#xa;MDAO, mass properties,&#xa;simulation and hazard models" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="285" y="300" width="230" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-p3" value="6–14 months&#xa;Component selection,&#xa;procurement, tooling,&#xa;software and HIL integration" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="555" y="300" width="230" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-p4" value="12–22 months&#xa;Airframe assembly,&#xa;systems integration,&#xa;ground rigs and simulator" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="825" y="300" width="230" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-p5" value="18–28 months&#xa;Ground test,&#xa;software validation,&#xa;instrumentation and readiness reviews" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1095" y="300" width="230" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-p6" value="28–42 months&#xa;Staged flight demonstration,&#xa;training-system integration,&#xa;data review and change control" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1365" y="300" width="260" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-p7" value="42+ months&#xa;Optional expanded qualification&#xa;and authority review&#xa;Not included in base target" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f5f5f5;strokeColor=#999999;fontColor=#333333;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1665" y="300" width="160" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6c8ebf;endArrow=block;" edge="1" parent="1" source="a-p1" target="a-p2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82b366;endArrow=block;" edge="1" parent="1" source="a-p2" target="a-p3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82b366;endArrow=block;" edge="1" parent="1" source="a-p3" target="a-p4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82b366;endArrow=block;" edge="1" parent="1" source="a-p4" target="a-p5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;endArrow=block;" edge="1" parent="1" source="a-p5" target="a-p6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;dashed=1;strokeColor=#999999;endArrow=block;" edge="1" parent="1" source="a-p6" target="a-p7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="a-ai-title" value="AI-ACCELERATED WORKSTREAMS" style="text;html=0;strokeColor=none;fillColor=none;fontColor=#8064a2;fontStyle=1;fontSize=15;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="500" width="480" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-ai1" value="Requirements and traceability&#xa;Extract needs, flag ambiguity, draft verification links, maintain change impact map" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e4dfec;strokeColor=#8064a2;fontColor=#403252;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="550" width="300" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-ai2" value="Simulation and MDAO&#xa;Generate scenarios, surrogate models, sensitivity studies, and regression suites for review" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e4dfec;strokeColor=#8064a2;fontColor=#403252;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="365" y="550" width="300" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-ai3" value="Software and test support&#xa;Create scaffolding, test vectors, data parsers, dashboards, and anomaly summaries" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e4dfec;strokeColor=#8064a2;fontColor=#403252;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="705" y="550" width="300" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-ai4" value="Training and knowledge support&#xa;Explain models, build exercises, prepare debriefs, and retrieve approved design evidence" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e4dfec;strokeColor=#8064a2;fontColor=#403252;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1045" y="550" width="300" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-ai5" value="Human review gate&#xa;Every output receives engineering ownership, source status, approval state, and verification method" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1385" y="550" width="440" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="a-ai-flow" value="Astra Max Work Plugin / Local Connector → Approved RAG / MCP Data → Local gpt-oss Inference → Advisory output → Human engineering review" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e4dfec;strokeColor=#8064a2;fontColor=#403252;fontSize=12;align=center;verticalAlign=middle;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="25" y="735" width="1120" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-ai-rule" value="No direct vehicle, propulsion, flight-control, life-support, emergency, or safety-release commands. No AI-only sign-off." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontStyle=1;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="735" width="625" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="a-metric" value="ACCELERATION METRIC&#xa;Measure schedule gain by approved baselines completed, simulation regressions passed, defects removed, and review latency reduced — not by deleting safety or test steps." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#5a4a00;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="880" width="1800" height="75" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="open-architecture-cost" name="04 - Open Architecture and Cost Controls">
+    <mxGraphModel dx="1800" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="o-title" value="Open Architecture — High-Strength Industrial Alternatives and Cost Controls" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#1f4e78;strokeColor=#163a5c;fontColor=#ffffff;fontStyle=1;fontSize=19;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="20" width="1800" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-core" value="OPEN SYSTEMS CORE&#xa;Documented interfaces • versioned data • modular replacement • supplier independence • deterministic verification • non-proprietary model exchange" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontStyle=1;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="575" y="120" width="700" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-airframe" value="Airframe and&#xa;high-strength structure&#xa;Qualified steel, aluminum,&#xa;industrial CFRP / hybrid laminate" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="290" width="250" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-prop" value="Propulsion and&#xa;energy modules&#xa;Existing, separately qualified&#xa;commercial engine and support modules" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="315" y="290" width="250" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-avionics" value="Avionics and&#xa;training systems&#xa;Modular computers, sensors,&#xa;displays, data buses, simulator" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e4dfec;strokeColor=#8064a2;fontColor=#403252;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="605" y="290" width="250" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-test" value="Test and digital thread&#xa;HIL, simulation, logs,&#xa;configuration and evidence" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e4dfec;strokeColor=#8064a2;fontColor=#403252;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="895" y="290" width="250" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-production" value="Production and&#xa;supply chain&#xa;Open drawings, jigs, inspection,&#xa;calibration, serial records" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1185" y="290" width="250" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-governance" value="Safety and authority&#xa;Independent review,&#xa;certification basis, release gates" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1475" y="290" width="350" height="125" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#6c8ebf;endArrow=block;" edge="1" parent="1" source="o-core" target="o-airframe">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#6c8ebf;endArrow=block;" edge="1" parent="1" source="o-core" target="o-prop">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#6c8ebf;endArrow=block;" edge="1" parent="1" source="o-core" target="o-avionics">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#6c8ebf;endArrow=block;" edge="1" parent="1" source="o-core" target="o-test">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#6c8ebf;endArrow=block;" edge="1" parent="1" source="o-core" target="o-production">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;endArrow=block;" edge="1" parent="1" source="o-core" target="o-governance">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="o-strategy-title" value="ALTERNATIVE COMPONENT STRATEGY" style="text;html=0;strokeColor=none;fillColor=none;fontColor=#1f4e78;fontStyle=1;fontSize=15;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="490" width="480" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-rule1" value="Use high-strength industrial materials where their process, corrosion, fatigue, joining, and inspection evidence is adequate for the allocated function." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="540" width="430" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-rule2" value="Open interface does not mean unqualified hardware. Aviation safety, pressure, fire, software, and structural rules still govern the final component." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="540" width="430" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-rule3" value="Prefer modular procurement: replaceable sensors, computers, harnesses, displays, actuators, and test equipment with stable interfaces and configuration records." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#e4dfec;strokeColor=#8064a2;fontColor=#403252;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="955" y="540" width="430" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-rule4" value="Use carbon fiber selectively for weight, stiffness, or corrosion advantages; do not substitute it into a safety-critical structure without validated layup, bonding, damage tolerance, and inspection evidence." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#5a4a00;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="540" width="405" height="105" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="o-cost-title" value="COST-CONTROL LEVERS" style="text;html=0;strokeColor=none;fillColor=none;fontColor=#1f4e78;fontStyle=1;fontSize=15;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="720" width="350" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-cost" value="1. Reuse a proven two-seat concept basis where legally and technically available.&#xa;2. Buy already-qualified engines and safety-critical hardware; develop interfaces and training systems around them.&#xa;3. Build one airworthy article plus non-flight ground rigs.&#xa;4. Use open simulation and model-exchange formats.&#xa;5. Maintain a material and supplier substitution register.&#xa;6. Apply AI to knowledge-work acceleration while preserving review gates." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f5f5f5;strokeColor=#999999;fontColor=#333333;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="770" width="880" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-risk" value="PRIMARY COST RISKS&#xa;New engine or propulsion development • certification basis changes • composite tooling and rework • low-volume supplier premiums • safety-critical software rework • test-site availability • late mass-property growth • export-control or licensing constraints" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="955" y="770" width="870" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="o-end" value="Decision rule: approve the base estimate only after the reference aircraft basis, controlled CAD, material takeoff, engine strategy, supplier plan, safety basis, and test authority are independently reviewed." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="980" width="1800" height="60" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="assumptions-sources" name="05 - Assumptions, Sources, and Exclusions">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1850" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="s-title" value="Assumptions, Sources, and Exclusions — Estimate Control Page" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#1f4e78;strokeColor=#163a5c;fontColor=#ffffff;fontStyle=1;fontSize=19;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="20" width="1800" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="s-assumptions" value="CORE ASSUMPTIONS&#xa;• Two-seat tandem training demonstrator based on the public ATG Javelin concept family.&#xa;• One airworthy prototype plus non-flight structural, propulsion, software, and HIL rigs.&#xa;• No weapons, tactical systems, combat payloads, or operational deployment.&#xa;• Existing or separately qualified propulsion and safety-critical components are procured; no new engine program.&#xa;• Open architecture means documented interfaces and data, not automatic qualification.&#xa;• Industrial high-strength alternatives are accepted only after structural, fatigue, fire, environmental, software, and certification review.&#xa;• Base estimate ends at controlled prototype demonstration and evidence review." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="105" width="870" height="260" as="geometry"/>
+        </mxCell>
+        <mxCell id="s-exclusions" value="EXCLUSIONS&#xa;• Type certification and production certification.&#xa;• Carrier qualification, weapon integration, tactical performance, or combat-system development.&#xa;• Exact geometry, speeds, range, ceiling, loads, fuel capacity, structural margins, or engine settings.&#xa;• Site-specific mining economics, taxes, royalties, freight, financing, and exchange-rate forecasts.&#xa;• Guarantee of schedule, price, export value, energy output, or industrial readiness." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5c1f1f;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="955" y="105" width="870" height="260" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="s-source-title" value="SOURCE REGISTER" style="text;html=0;strokeColor=none;fillColor=none;fontColor=#1f4e78;fontStyle=1;fontSize=15;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="430" width="360" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s-wiki" value="ATG Javelin context&#xa;Wikipedia page supplied by the user.&#xa;Use: historical two-seat prototype and trainer context only; not an authoritative certification source." link="https://en.wikipedia.org/wiki/ATG_Javelin" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="480" width="430" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="s-lme" value="Industrial metals references&#xa;LME official price venue and current market pages.&#xa;Use: relative copper and aluminum planning bands; local landed values still required." link="https://www.lme.com/" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f4b183;strokeColor=#c65911;fontColor=#6b2f00;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="495" y="480" width="430" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="s-steel" value="Steel planning references&#xa;Public hot-rolled and industrial steel market indicators.&#xa;Use: establish a structural-steel reference band; regional grade, form, freight, and certification premiums remain open." link="https://aisusteel.org/" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#274e27;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="965" y="480" width="390" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="s-cfrp" value="Carbon-fiber planning references&#xa;Public carbon-fiber and sheet/prepreg market indicators.&#xa;Use: broad finished-CFRP planning ratio only; qualified aerospace laminate price requires RFQ." link="https://www.imarcgroup.com/carbon-fibre-price-trend" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d9d9d9;strokeColor=#595959;fontColor=#1f1f1f;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1395" y="480" width="430" height="145" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="s-gates-title" value="APPROVAL GATES BEFORE A REAL BUDGET" style="text;html=0;strokeColor=none;fillColor=none;fontColor=#1f4e78;fontStyle=1;fontSize=15;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="690" width="600" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s-gates" value="1. Confirm legal right to use the Javelin concept and any legacy drawings.&#xa;2. Freeze a new non-weapon, training-only mission and certification basis.&#xa;3. Produce controlled CAD, mass properties, material takeoff, and supplier quote pack.&#xa;4. Select engine, avionics, safety, and test suppliers with availability evidence.&#xa;5. Validate energy and material assumptions with local process data.&#xa;6. Run independent architecture, structural, software, safety, and regulatory reviews.&#xa;7. Recalculate SET, commodity equivalents, GWh, and schedule at each baseline." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#1a3553;fontSize=12;align=left;verticalAlign=middle;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="25" y="740" width="880" height="205" as="geometry"/>
+        </mxCell>
+        <mxCell id="s-confidence" value="ESTIMATE CONFIDENCE&#xa;Class 4 conceptual estimate.&#xa;Expected uncertainty: approximately −30% / +60% until the gates above are complete.&#xa;The uncertainty is driven mainly by certification scope, engine strategy, tooling, test-site availability, low-volume procurement, and material qualification." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#5a4a00;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="955" y="740" width="870" height="205" as="geometry"/>
+        </mxCell>
+        <mxCell id="s-final" value="Interpretation: this Draw.io file expresses a resource and schedule model in physical purchasing-power units. It is suitable for training, portfolio comparison, and early architecture review; it is not a procurement commitment or operational authorization." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f5f5f5;strokeColor=#999999;fontColor=#333333;fontStyle=1;fontSize=12;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="25" y="1010" width="1800" height="70" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
