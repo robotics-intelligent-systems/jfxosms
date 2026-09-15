@@ -1,1540 +1,648 @@
-# JFXOSMS — Open-Source Alternative Integration Architecture
+# JFXOSMS — Open Microfactory Simulation and AI Decision Architecture
 
-> **Project focus:** AI-Powered Microfactory Simulation Platform  
-> **Architecture goal:** reorganize the software alternatives listed in the source project into interoperable building blocks for microfactory design, additive/subtractive manufacturing, robotics, process simulation, digital twins, IIoT, MES/OEE/CMMS, scheduling, and AI-assisted engineering.
+**Consolidated English proposal · Revision: 2026-09-15**
+
+**Project:** [robotics-intelligent-systems/jfxosms][jfxosms]
+
+JFXOSMS is conceived as a modular environment for designing, simulating, operating, and improving microfactories. This consolidated proposal extends its manufacturing and digital-twin compendium with three complementary development blocks: inventory optimization, manufacturing-line optimization, and an operator decision-support interface.
+
+The proposed result connects engineering models, production scenarios, material availability, equipment behavior, and reviewed operational decisions in one traceable workflow. It combines deterministic optimization and simulation with learned policies and an optional engineering copilot.
+
+**Implementation status:** this document is an architecture and development specification. The adapters, services, contracts, and deployment profiles described here are proposed work; their inclusion does not mean that they already exist in JFXOSMS. The three supplied Bonsai repositories were inspected as reusable examples, including relevant source files and licenses. Their historical hosted-service workflows are not prerequisites for the proposed local implementation.
+
+**Suggested short project description**
+
+> Microfactory engineering and simulation platform integrating digital twins, inventory optimization, manufacturing-line policies, and operator decision support through modular services and reproducible AI evaluation.
+
+## Table of Contents
+
+- [1. Project purpose and engineering lifecycle](#project-purpose)
+- [2. Integration principles and boundaries](#integration-principles)
+- [3. Verified sources and integration status](#source-status)
+- [4. Consolidated architecture](#consolidated-architecture)
+- [5. Categorized software compendium](#software-compendium)
+- [6. Bonsai integration proposal and package references](#bonsai-integration)
+- [6.1 Inventory management development block](#inventory-block)
+- [6.2 Manufacturing-line optimization development block](#line-block)
+- [6.3 Decision-support development block](#decision-support-block)
+- [7. Middleware and service contracts](#middleware-contracts)
+- [8. Coordinated inventory and production workflow](#coordinated-workflow)
+- [9. AI engineering and knowledge services](#engineering-ai)
+- [10. Digital twin and simulation consistency](#simulation-consistency)
+- [11. Deployment profiles](#deployment-profiles)
+- [12. Evaluation and measurable outcomes](#evaluation)
+- [13. Engineering requirements and acceptance criteria](#requirements)
+- [14. MVP and delivery roadmap](#roadmap)
+- [15. Proposed repository organization](#repository-organization)
+- [16. Licensing, maintenance, and adoption](#licensing-maintenance)
+- [17. Source references and revision snapshots](#references)
 
 ---
 
-## 1. Source Project Direction
+<a id="project-purpose"></a>
 
-The source repository defines **JFXOSMS** as an **AI-Powered Microfactory Simulation Platform**.
+## 1. Project Purpose and Engineering Lifecycle
 
-Its software list covers a broad microfactory lifecycle:
+The existing [JFXOSMS description][base-readme] covers microfactory engineering, additive and subtractive manufacturing, robotics, process simulation, digital twins, industrial connectivity, and factory operations. This proposal retains those domains and adds a coordinated decision layer for materials and production.
 
-- drone / robotic platform concepts;
-- CNC simulation and computer-aided machining;
-- additive-manufacturing slicing and toolpath planning;
-- hybrid additive/subtractive manufacturing;
-- G-code visualization;
-- additive-manufacturing simulation;
-- alloy solidification and microstructure simulation;
-- peridynamics;
-- selective-laser-melting integration;
-- welding / additive-manufacturing modelling;
-- EAM / CMMS / OEE;
-- Digital Twin as a Service;
-- FMU-based digital twins;
-- discrete-event factory simulation;
-- IIoT connectivity and process-data twins;
-- physical-world deployment and coordination;
-- production/logistics twins;
-- warehouse/manufacturing development frameworks;
-- factory automation simulation;
-- robotic microfactory cells;
-- manufacturing execution and performance monitoring.
+The engineering sequence remains **MBSE → CAD → CAM → CAS**, with feedback from simulated and observed operations.
 
-The source repository also maintains the engineering lifecycle:
+| Stage | Purpose in the consolidated project | Representative outputs |
+|---|---|---|
+| MBSE | Define system boundaries, responsibilities, constraints, and verification cases | Requirements, capability models, interface definitions |
+| CAD | Describe products, fixtures, cells, and factory layouts | Versioned geometry and asset identifiers |
+| CAM | Prepare additive, machining, and robotic production plans | Toolpaths, operation sequences, task definitions |
+| CAS | Evaluate process behavior, factory flow, inventory, and control alternatives | Reproducible scenarios, performance estimates, validation evidence |
+| Operations | Execute approved plans and record material and equipment events | Production records, stock movements, maintenance history |
+| Improvement | Compare baseline and candidate policies using the same scenarios | Reviewed policy releases and revised planning assumptions |
 
-```text
-MBSE → CAD → CAM → CAS
+The expanded platform should help engineers and operators answer practical questions: Are materials available for a proposed plan? Where will the line become starved or blocked? Which policy improves service or throughput under the same constraints? What evidence supports releasing a recommendation?
+
+<a id="integration-principles"></a>
+
+## 2. Integration Principles and Boundaries
+
+1. **Use replaceable components.** Keep upstream simulators, enterprise systems, model runtimes, and user interfaces behind versioned adapters.
+2. **Start with simulation and baselines.** Establish inventory and line-control reference policies before training a replacement.
+3. **Separate decision horizons.** Inventory planning, production scheduling, line supervision, and real-time machine control have different clocks and responsibilities.
+4. **Make constraints explicit.** Resource limits, reservations, approved operating ranges, and data freshness must be checked independently of model predictions.
+5. **Keep operational authority clear.** Planning services propose orders; MES or enterprise workflows release them. Industrial controllers retain responsibility for machine behavior and protective functions.
+6. **Preserve reproducibility.** Record simulator revisions, seeds, observations, transformations, policy artifacts, constraints, and approval events.
+7. **Provide local operation.** A local simulator, optimizer, and policy-serving path should support the MVP. Compatibility with an existing Bonsai brain is an optional profile.
+
+The project scope is microfactory engineering and operations. The three new blocks complement CAM, process physics, MES, and maintenance; none of them independently implements those domains.
+
+<a id="source-status"></a>
+
+## 3. Verified Sources and Integration Status
+
+| Source | Observed capability | Consequence for this architecture |
+|---|---|---|
+| [JFXOSMS][jfxosms] | Architecture README and engineering diagram assets in the inspected tree | Treat the consolidated design as a development proposal, not a report of deployed services |
+| [bonsai-InventoryManagement][inventory] | Nested documentation and Python code for a hybrid safety-stock policy plus multi-SKU optimization | Reuse the simulation and optimization structure; add material-system adapters and independently enforced constraints |
+| [bonsai-ManufacturingLineOptimization][line] | SimPy-based production-line simulation, per-machine speed policies, assessments, and Bonsai integration | Reuse the line benchmark and policy interface; calibrate a microfactory-specific model |
+| [bonsai-decision-support-interface][decision] | Experimental Streamlit interface for an exported brain, state/action display, and CSV export | Evolve it into a reviewed recommendation workspace with typed data and an audit service |
+
+All three SDK2035 forks carry an MIT license. Their corresponding Microsoft parent repositories were marked archived at review time; the inspected SDK2035 forks were not marked archived. That distinction does not establish active maintenance or compatibility with current runtimes. See the [repository references and snapshots](#references).
+
+Two source details materially affect integration:
+
+- The inventory repository's root README is largely a template; its useful technical explanation is in [bonsai/readme.md][inventory-guide].
+- Both inventory and line repositories have a minimal `interface.json` with placeholder `empty` fields. Concrete contracts must be recovered from Python and Inkling definitions, then validated against actual simulator behavior.
+
+The packages concern **Microsoft Project Bonsai** workflows. The hosted training platform, SDKs, exported model artifacts, and MIT-licensed examples are distinct dependencies. This proposal does not assume that an old cloud endpoint remains available.
+
+<a id="consolidated-architecture"></a>
+
+## 4. Consolidated Architecture
+
+The architecture has an engineering path, a simulation path, and an operational decision path. Shared asset and scenario identifiers connect them.
+
+```mermaid
+flowchart TD
+    E["Requirements and engineering models"] --> P["Manufacturing plans and asset models"]
+    P --> S["Process and factory simulation"]
+    O["MES, materials and maintenance"] --> T["Twin and operational data"]
+    T --> S
+    S --> B["Versioned scenario and policy API"]
+    T --> B
+    B --> I["Inventory policy and optimizer"]
+    B --> L["Line policy service"]
+    I --> C["Planning coordinator and constraint checks"]
+    L --> C
+    C --> U["Decision-support workspace"]
+    U --> A["Approved operational requests"]
+    A --> O
+    A --> G["Industrial execution gateway"]
+    G --> M["Machine and robot controllers"]
+    M --> T
+    K["Engineering copilot"] --> B
+    K --> U
 ```
 
-with Arcadia/Capella-oriented MBSE, CAD for computer-aided design, CAM for manufacturing/assembly, and CAS for end-to-end simulation and performance analysis.
+The **planning coordinator** is a new JFXOSMS service. It reconciles material availability and line capacity, associates recommendations with a common planning revision, and routes them to the appropriate authority. It does not merge all decisions into a single reinforcement-learning agent.
 
----
+The **industrial execution gateway** is also proposed integration work. In the first release, operational requests remain simulated or advisory. Enabling physical execution is a later commissioning decision supported by machine-specific validation.
 
-# 2. Integration Strategy
+<a id="software-compendium"></a>
 
-The software list should not be deployed as a monolithic stack.
+## 5. Categorized Software Compendium
 
-The preferred approach is to organize it into **replaceable building blocks** connected by stable interfaces:
+The following table consolidates the original component families and adds the three requested blocks. Existing candidates are retained from the [source compendium][base-readme]; their precise upstream identity, license, and interoperability still require individual adoption review where indicated.
 
-```text
-Product / Production Requirements
-              ↓
-        MBSE / Architecture
-              ↓
-       CAD / Part Definition
-              ↓
-     Manufacturing Planning
-              ↓
- ┌────────────┼─────────────┐
- ↓            ↓             ↓
-Additive    CNC/Milling   Robotic Assembly
- ↓            ↓             ↓
-Toolpaths   G-code        Robot Tasks
- └────────────┼─────────────┘
-              ↓
-      Process Simulation
-              ↓
-      Factory Simulation
-              ↓
-      Digital Twin / IIoT
-              ↓
- MES / OEE / CMMS / Maintenance
-              ↓
-      AI Optimization Layer
-              ↓
-    Physical Microfactory
-```
+| Category | Components or references | Proposed architectural role |
+|---|---|---|
+| Engineering foundation | Arcadia / Capella; CAD models | System architecture, requirements traceability, geometry, and factory layouts |
+| A. Additive toolpaths | ORNLSlicer; IceSL-vrprinter; libSLM | Slicing, path inspection, and specialized SLM data or machine adapters |
+| B. Subtractive manufacturing | CAMotics | CNC path verification within a separate machining workflow |
+| C. Hybrid manufacturing | ASMBL | Connect additive operations with subsequent milling steps |
+| D. Process and materials simulation | JAX additive-manufacturing simulation; ExaCA; PeriLab | Thermal/process studies, microstructure evolution, and damage analysis; identify the exact JAX project |
+| E. Welding and AM reference | Abaqus WeldToolkit | Optional external validation dependent on the required commercial environment |
+| F. Robotics and microfactory cells | open-microfactory; Open Drone project | Assembly and robotic-cell integration; resolve the ambiguous drone entry before selection |
+| G. Factory-flow simulation | FactorySimPy; generic discrete-event simulation | Orders, queues, resources, transport, and production-flow scenarios |
+| H. Digital-twin services | OpenTwin; CoFmuPy; Digital Twin as a Service | Twin and co-simulation candidates; treat DTaaS as a pattern until its upstream is identified |
+| I. Production and logistics twins | Open Factory Twin; IndustryFusion Process Data Twin | Factory state, logistics context, and semantic process information |
+| J. Industrial connectivity | IndustryFusion | Industrial data acquisition and normalization |
+| K. Deployment and coordination | OpenFactory | Versioned asset configuration and deployment workflows |
+| L. Manufacturing applications | Open Industry Project | Candidate warehouse and manufacturing application services; validate the exact APIs |
+| M. MES, OEE, and operations | Libre; Manufacturing Efficiency & Maintenance Management Platform; OEE and CMMS Software for Machine Manufacturers | Production execution and performance records; resolve generic platform names |
+| N. Asset management | BaseEAM | Equipment history, maintenance, spares, and work orders |
+| External automation reference | Factory I/O | Optional commercial training or validation adapter |
+| **O. Inventory decision AI** | **[bonsai-InventoryManagement][inventory]** | **Per-SKU safety-stock policy followed by coordinated purchase-order optimization** |
+| **P. Line decision AI** | **[bonsai-ManufacturingLineOptimization][line]** | **Simulation-based machine-speed policy development and comparison** |
+| **Q. Operator decision support** | **[bonsai-decision-support-interface][decision]** | **Recommendation inspection, comparison, and a starting point for an approval interface** |
+| R. Local learning extensions | [Gymnasium][gymnasium]; [Stable-Baselines3][sb3] | Proposed environment wrappers and local reinforcement-learning training |
+| S. Engineering AI and data services | LangGraph; MCP; Qdrant; PostgreSQL; FastAPI; MLflow | Candidate bounded workflows, retrieval, APIs, persistence, and experiment records |
+| T. Model serving and visibility | Ollama; llama.cpp; vLLM; optional Open WebUI; OpenTelemetry; Prometheus; Grafana | Candidate inference, portal, telemetry, and dashboards |
 
-The core principle is:
+The original optional **gpt-oss-20b** and **gpt-oss-120b** model tiers remain model-routing candidates, subject to resource and model-license review. Open-weight model availability is distinct from the licensing of surrounding software.
 
-> **Simulate first, validate digitally, deploy through controlled industrial interfaces, and use AI as an optimization and engineering-assistance layer rather than as an unrestricted machine controller.**
+The compendium is a selection framework. A deployment should choose one component per necessary responsibility rather than install every alternative.
 
----
+<a id="bonsai-integration"></a>
 
-# 3. Alternative Building-Block Architecture
+## 6. Bonsai Integration Proposal and Package References
 
-```text
-┌─────────────────────────────────────────────────────────────────────────┐
-│                    PRODUCT & SYSTEM ENGINEERING                         │
-│ Requirements | Arcadia/Capella | MBSE | CAD Models | Process Plans    │
-└───────────────────────────────┬─────────────────────────────────────────┘
-                                │
-                                v
-┌─────────────────────────────────────────────────────────────────────────┐
-│                  AI ENGINEERING / PLANNING LAYER                        │
-│ Design Copilot | RAG | Agent Workflows | Optimization | Scheduling    │
-└───────────────────────────────┬─────────────────────────────────────────┘
-                                │
-             ┌──────────────────┼───────────────────┐
-             │                  │                   │
-             v                  v                   v
-┌───────────────────┐ ┌────────────────────┐ ┌───────────────────────────┐
-│ ADDITIVE / SLICER │ │ CNC / SUBTRACTIVE  │ │ ROBOTIC MICROFACTORY     │
-│ ORNLSlicer        │ │ CAMotics           │ │ open-microfactory         │
-│ IceSL-vrprinter   │ │ CAM / G-code       │ │ Open Drone project       │
-│ libSLM            │ │ ASMBL milling      │ │ manipulation / mobility  │
-└─────────┬─────────┘ └─────────┬──────────┘ └────────────┬──────────────┘
-          │                     │                         │
-          └─────────────────────┼─────────────────────────┘
-                                v
-┌─────────────────────────────────────────────────────────────────────────┐
-│                MANUFACTURING PROCESS PHYSICS / V&V                      │
-│ JAX AM Simulation | ExaCA | PeriLab | SLM/Weld Models                 │
-└───────────────────────────────┬─────────────────────────────────────────┘
-                                │
-                                v
-┌─────────────────────────────────────────────────────────────────────────┐
-│                   FACTORY / LOGISTICS SIMULATION                        │
-│ FactorySimPy | DES | Open Factory Twin | Factory I/O*                 │
-└───────────────────────────────┬─────────────────────────────────────────┘
-                                │
-                                v
-┌─────────────────────────────────────────────────────────────────────────┐
-│                   DIGITAL TWIN & CO-SIMULATION                          │
-│ OpenTwin | CoFmuPy | DTaaS | FMU/FMI | Process Data Twin             │
-└───────────────────────────────┬─────────────────────────────────────────┘
-                                │
-                                v
-┌─────────────────────────────────────────────────────────────────────────┐
-│                       IIoT / EDGE PLATFORM                              │
-│ IndustryFusion | OpenFactory | Open Industry Project                  │
-│ Asset APIs | Telemetry | Event Streams | Device Coordination          │
-└───────────────────────────────┬─────────────────────────────────────────┘
-                                │
-                                v
-┌─────────────────────────────────────────────────────────────────────────┐
-│                 PRODUCTION OPERATIONS / ASSET MGMT                      │
-│ Libre | BaseEAM | OEE/CMMS | Maintenance & Efficiency Platforms       │
-└───────────────────────────────┬─────────────────────────────────────────┘
-                                │
-                                v
-┌─────────────────────────────────────────────────────────────────────────┐
-│                 DATA / AI / OBSERVABILITY / OPTIMIZATION                │
-│ RAG | Local AI | Forecasting | Anomaly Detection | Scheduling         │
-│ PostgreSQL | Time-Series | Grafana | MLflow | OpenTelemetry           │
-└───────────────────────────────┬─────────────────────────────────────────┘
-                                │
-                                v
-┌─────────────────────────────────────────────────────────────────────────┐
-│                  DEPLOYMENT / INDUSTRIAL DEVOPS                         │
-│ Linux | Docker | Kubernetes/k3s | GitOps | Edge Nodes | CI/CD         │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+The three requested sources form a practical development package:
 
-`* Factory I/O is useful as an external industrial-automation simulation reference, but should not be classified as part of the open-source core without appropriate licensing.`
+| Block ID | Reference | Main decision | Intended consumer |
+|---|---|---|---|
+| `AI-INV` | [Inventory Management][inventory] | Safety-stock targets and constrained order proposals | Materials planner, warehouse or enterprise system |
+| `AI-LINE` | [Manufacturing Line Optimization][line] | Candidate machine-speed setpoints | Simulation runner and authorized line-supervision service |
+| `AI-DSI` | [Decision Support Interface][decision] | Display and review recommendations | Engineers, planners, and operators |
 
----
+These blocks share schemas and scenario context, while preserving separate model ownership, release histories, and decision horizons.
 
-# 4. Category A — Additive Manufacturing Toolpath Planning
+<a id="inventory-block"></a>
 
-## ORNLSlicer
+### 6.1 Inventory Management Development Block
 
-**Source role:** open-source slicing and toolpath planning framework.
+**Source:** [sdk2035/bonsai-InventoryManagement][inventory] · [Technical guide][inventory-guide]
 
-### Recommended position
+The source describes a hybrid approach: a learned policy selects safety stock for an individual SKU, and an optimizer coordinates orders across SKUs and capacity limits. Its example models a multi-echelon supply chain with forecast uncertainty, inventory costs, and missed-demand costs. The example uses three controlled stock stages; a general microfactory bill of materials is an extension, not an existing feature.
 
-```text
-CAD / Mesh
-    ↓
-ORNLSlicer
-    ↓
-Toolpath
-    ↓
-AM Simulation
-    ↓
-Machine Adapter
-```
-
-### Strategic value
-
-**5/5 — Core candidate**
-
-Why it matters:
-
-- directly supports additive toolpath generation;
-- bridges CAD and CAM;
-- suitable for modular machine exporters;
-- useful for FDM/DED-oriented research and production workflows.
-
-### Architectural classification
-
-**Primary Open-Source Additive Toolpath Engine**
-
----
-
-## IceSL-vrprinter
-
-**Source role:** G-code visualizer and simulator.
-
-### Strategic value
-
-**3/5 — Validation / visualization candidate**
-
-Best for:
-
-- G-code visualization;
-- toolpath inspection;
-- pre-deployment verification;
-- operator training.
-
-Recommended as a complementary viewer rather than the main manufacturing kernel.
-
----
-
-## libSLM
-
-**Source role:** C++ library for generating and transferring data to SLM machine systems.
-
-### Strategic value
-
-**4/5 — Specialized metal-AM integration candidate**
-
-Best fit:
-
-```text
-Part / Process Definition
-        ↓
-SLM Toolpath/Data
-        ↓
-libSLM
-        ↓
-Machine Adapter
-```
-
-Use behind a machine-neutral interface because SLM hardware integration can vary substantially between vendors.
-
----
-
-# 5. Category B — CNC / Subtractive Manufacturing
-
-## CAMotics
-
-**Source role:** open-source CNC simulation and computer-aided machining reference.
-
-### Strategic value
-
-**5/5 — Core CNC simulation candidate**
-
-Best for:
-
-- 3-axis G-code simulation;
-- toolpath visualization;
-- CNC verification;
-- manufacturing education;
-- digital validation before machining.
-
-Recommended role:
-
-```text
-CAM / G-code
-      ↓
-CAMotics
-      ↓
-Virtual Machining
-      ↓
-Validated NC Program
-```
-
-CAMotics should be treated principally as a **simulation/verification engine**, not as the sole production CAM engine.
-
----
-
-# 6. Category C — Hybrid Additive + Subtractive Manufacturing
-
-## ASMBL
-
-**Source role:** manufacturing technique combining FDM 3D printing with traditional milling.
-
-### Strategic value
-
-**4/5 — Strategic hybrid-manufacturing research block**
-
-Architecture:
-
-```text
-Additive Build
-      ↓
-Intermediate Geometry
-      ↓
-Milling / Finishing
-      ↓
-Inspection
-```
-
-JFXOSMS can use ASMBL concepts to model hybrid cells in which additive and subtractive processes are coordinated by one manufacturing plan.
-
----
-
-# 7. Category D — Additive-Manufacturing Physics
-
-## Additive Manufacturing Simulation with JAX
-
-**Source role:** JAX-based additive-manufacturing simulation.
-
-### Strategic value
-
-**4/5 — AI/HPC simulation candidate**
-
-Potential advantages:
-
-- differentiable numerical workflows;
-- GPU/accelerator execution;
-- integration with optimization;
-- surrogate-model development;
-- parameter estimation.
-
-Recommended role:
-
-```text
-Process Parameters
-       ↓
-JAX Simulation
-       ↓
-Thermal / Process Response
-       ↓
-Optimization / Calibration
-```
-
-Exact upstream project and licensing should be documented before promotion to a production dependency.
-
----
-
-## ExaCA
-
-**Source role:** cellular-automata code for alloy nucleation and solidification.
-
-### Strategic value
-
-**5/5 — High-value materials/process simulation**
-
-Best for:
-
-- microstructure evolution;
-- alloy solidification;
-- additive-manufacturing materials research;
-- multiscale process validation.
-
-Suggested integration:
-
-```text
-AM Thermal History
-       ↓
-ExaCA
-       ↓
-Microstructure Prediction
-       ↓
-Quality / Property Model
-```
-
----
-
-## PeriLab
-
-**Source role:** peridynamics software.
-
-### Strategic value
-
-**4/5 — Structural/failure simulation candidate**
-
-Potential use:
-
-- damage;
-- fracture;
-- material failure;
-- nonlocal mechanics;
-- manufacturing-induced defects.
-
-It complements conventional FEM rather than replacing all structural simulation.
-
----
-
-# 8. Category E — Welding / AM Modelling
-
-## Abaqus WeldToolkit
-
-The source repository lists **Abaqus WeldToolkit** for welding and additive-manufacturing modelling.
-
-Because it depends on the Abaqus ecosystem, it should be kept outside the open-source core.
-
-### Classification
-
-**External Commercial / Validation Reference**
-
-Recommended open architecture:
-
-```text
-Common Process Model
-        |
-        +---- Open Solver / Research Model
-        |
-        +---- Optional Abaqus Validation Adapter
-```
-
-This preserves reproducibility without making a commercial solver mandatory.
-
----
-
-# 9. Category F — Robotics & Physical Microfactory
-
-## open-microfactory
-
-**Source role:** open-source robotic assembly cell for dexterous manipulation.
-
-### Strategic value
-
-**5/5 — Primary robotic microfactory candidate**
-
-Recommended use:
-
-- robotic assembly;
-- manipulation;
-- autonomous cell experimentation;
-- task execution;
-- physical validation of digital manufacturing workflows.
-
-Architecture:
-
-```text
-Manufacturing Order
-       ↓
-Task Planner
-       ↓
-Robot Skill
-       ↓
-open-microfactory
-       ↓
-Sensors / Actuators
-```
-
----
-
-## Open Drone Project
-
-The repository lists **The Open Drone project** without enough source detail to uniquely identify its upstream implementation.
-
-### Classification
-
-**Research / Mobility / Inspection Candidate — upstream verification required**
-
-Possible architectural role, if confirmed:
-
-- indoor logistics;
-- inspection;
-- inventory;
-- visual monitoring;
-- mobile sensing.
-
-Do not hard-code this block until the exact project and license are identified.
-
----
-
-# 10. Category G — Factory Discrete-Event Simulation
-
-## FactorySimPy
-
-**Source role:** Python library for manufacturing-system discrete-event simulation.
-
-### Strategic value
-
-**5/5 — Primary open factory-flow simulator**
-
-Recommended for:
-
-- machines;
-- buffers;
-- conveyors;
-- fleets;
-- production throughput;
-- bottleneck analysis;
-- resource utilization;
-- line balancing;
-- digital-twin experimentation.
-
-Architecture:
-
-```text
-Production Configuration
-        ↓
-FactorySimPy
-        ↓
-Events / KPI / State
-        ↓
-Optimization
-        ↓
-Candidate Production Plan
-```
-
-It is an excellent bridge between microfactory topology and AI optimization.
-
----
-
-## Generic Discrete-Event Simulation
-
-The source also references simulation of manufacturing or service processes using DES.
-
-### Classification
-
-**Core Methodology**
-
-The architecture should expose a generic DES interface so FactorySimPy can be replaced or complemented by another compatible engine.
-
----
-
-# 11. Category H — Digital Twin
-
-## OpenTwin
-
-**Source role:** open-source platform supporting development and operation of digital twins.
-
-### Strategic value
-
-**5/5 — Strategic Digital Twin Platform Candidate**
-
-Recommended position:
-
-```text
-Physical Assets
-      ↕
-Telemetry / Commands
-      ↕
-OpenTwin
-      ↕
-Simulation / Analytics / AI
-```
-
----
-
-## CoFmuPy
-
-**Source role:** Python library for rapid prototyping of digital twins.
-
-### Strategic value
-
-**5/5 — Lightweight FMU/Digital-Twin integration candidate**
-
-Best use:
-
-- FMI/FMU experimentation;
-- rapid digital-twin composition;
-- simulation service integration;
-- Python-driven orchestration.
-
-Recommended as the lightweight **co-simulation adapter layer**.
-
----
-
-## Digital Twin as a Service (DTaaS)
-
-The source lists a DTaaS project/concept but does not uniquely identify its upstream implementation.
-
-### Classification
-
-**Architecture Pattern / Candidate Platform — upstream verification required**
-
-Recommended role:
-
-```text
-Twin Model
-   +
-Telemetry
-   +
-Simulation
-   ↓
-DTaaS API
-   ↓
-Applications / AI / Dashboards
-```
-
----
-
-# 12. Category I — Production & Logistics Twin
-
-## Open Factory Twin
-
-**Source role:** digital twin for production and logistics environments.
-
-### Strategic value
-
-**4/5 — Strategic factory/logistics twin candidate**
-
-Best use:
-
-- material flow;
-- asset state;
-- production operations;
-- logistics;
-- synchronized factory simulation.
-
----
-
-## IndustryFusion Process Data Twin Architecture
-
-**Source role:** process-data twin architecture.
-
-### Strategic value
-
-**5/5 — Industrial semantic/data-twin integration candidate**
-
-Recommended as the semantic/data backbone connecting physical assets, IIoT data, and higher-level AI applications.
-
----
-
-# 13. Category J — IIoT & Smart Factory Connectivity
-
-## IndustryFusion
-
-**Source role:** open-source IIoT connectivity for smart products and smart factories.
-
-### Strategic value
-
-**5/5 — Primary IIoT integration candidate**
-
-Recommended for:
-
-- asset connectivity;
-- edge data;
-- semantic digital twins;
-- industrial interoperability;
-- smart-factory integration.
-
-Architecture:
-
-```text
-Machine / Robot / Sensor
-          ↓
-     Edge Connector
-          ↓
-    IndustryFusion
-          ↓
- Process Data Twin
-          ↓
- AI / MES / Analytics
-```
-
----
-
-# 14. Category K — Physical-World Deployment
-
-## OpenFactory
-
-**Source role:** deployment and coordination platform for the physical world.
-
-### Strategic value
-
-**5/5 — Strategic Industrial DevOps / Coordination Candidate**
-
-Recommended function:
-
-- declarative asset configuration;
-- simulation-before-deployment;
-- repeatable deployment;
-- coordination of distributed assets;
-- GitOps-style traceability.
-
-Architecture:
-
-```text
-Git / Configuration
-       ↓
-Validation / Simulation
-       ↓
-OpenFactory
-       ↓
-Industrial Assets
-       ↓
-Telemetry / Audit
-```
-
-This is a strong candidate for the **physical deployment control plane**.
-
----
-
-# 15. Category L — Manufacturing Application Framework
-
-## Open Industry Project
-
-**Source role:** free/open-source warehouse/manufacturing development framework.
-
-### Strategic value
-
-**4/5 — Business/process application framework candidate**
-
-Potential use:
-
-- warehouse workflows;
-- manufacturing applications;
-- inventory;
-- operations UI;
-- integration services.
-
-Exact upstream API and maturity should be validated before selecting it as a core dependency.
-
----
-
-# 16. Category M — MES / OEE / Operations
-
-## Libre
-
-**Source role:** open-source manufacturing execution and performance monitoring.
-
-### Strategic value
-
-**5/5 — MES / performance candidate**
-
-Best architectural role:
-
-```text
-Production Orders
-       ↓
-MES
-       ↓
-Machine / Cell Execution
-       ↓
-Production Events
-       ↓
-OEE / Analytics
-```
-
----
-
-## Manufacturing Efficiency & Maintenance Management Platform
-
-The source includes this as a platform reference but does not uniquely identify the upstream project.
-
-### Classification
-
-**MES/OEE/CMMS Candidate — exact project verification required**
-
----
-
-## OEE and CMMS Software for Machine Manufacturers
-
-### Classification
-
-**Maintenance / OEE Candidate — upstream verification required**
-
-Potential functionality:
-
-- availability;
-- performance;
-- quality;
-- downtime;
-- maintenance events;
-- equipment history.
-
----
-
-# 17. Category N — Enterprise Asset & Maintenance Management
-
-## BaseEAM
-
-**Source role:** EAM/CMMS.
-
-### Strategic value
-
-**4/5 — EAM / CMMS core candidate**
-
-Use for:
-
-- assets;
-- work orders;
-- preventive maintenance;
-- breakdown history;
-- spare parts;
-- equipment lifecycle.
-
-Architecture:
-
-```text
-Machine Twin
-    ↓
-Condition / Runtime
-    ↓
-Maintenance Rule
-    ↓
-BaseEAM
-    ↓
-Work Order
-```
-
----
-
-# 18. Factory I/O
-
-The source lists **Factory I/O** as a 3D factory simulator for learning automation technologies.
-
-It is technically valuable, especially for PLC/automation simulation, but its official product model uses commercial editions/licenses.
-
-### Classification
-
-**External Commercial Training / Validation Reference**
-
-It should therefore be integrated only through an optional adapter:
-
-```text
-Automation Scenario
-        |
-        +---- Open Simulation Core
-        |
-        +---- Factory I/O Adapter (optional)
-```
-
-This keeps the main JFXOSMS architecture open.
-
----
-
-# 19. Proposed Open-Source AI Integration Layer
-
-The source list is strong in manufacturing and simulation but can benefit from a unifying AI architecture.
-
-The following components are **proposed complementary integrations**, not claims about existing source dependencies:
-
-- LangGraph — agent/workflow orchestration;
-- MCP — bounded tool interoperability;
-- Qdrant — engineering RAG;
-- PostgreSQL — structured operational/state data;
-- Open WebUI — optional engineering AI portal;
-- FastAPI — model and simulation APIs;
-- Ollama / llama.cpp — local inference;
-- vLLM — private high-throughput inference;
-- gpt-oss-20b — optional local open-weight reasoning model;
-- gpt-oss-120b — optional private-server reasoning tier;
-- MLflow — AI/optimization experiment tracking;
-- OpenTelemetry / Prometheus / Grafana — observability.
-
----
-
-# 20. AI Engineering Copilot
-
-```text
-Engineer / Operator
-        |
-        v
-AI Engineering Copilot
-        |
-  +-----+----------------+----------------+
-  |                      |                |
-  v                      v                v
-RAG                  Planning Agent   Analytics Agent
-  |                      |                |
-  +----------------------+----------------+
-                         |
-                         v
-                   Tool Gateway / MCP
-                         |
-       +-----------------+------------------+
-       |                 |                  |
-       v                 v                  v
-  ORNLSlicer         FactorySimPy       OpenTwin
-  CAMotics           CoFmuPy            BaseEAM
-  ExaCA              OpenFactory        MES/OEE
-```
-
-Recommended AI uses:
-
-- manufacturing-plan assistance;
-- retrieval of machine manuals and process specifications;
-- toolpath parameter suggestions;
-- scenario generation;
-- production schedule optimization;
-- anomaly explanation;
-- predictive-maintenance support;
-- root-cause-analysis assistance;
-- digital-twin query;
-- simulation orchestration;
-- engineering report generation.
-
----
-
-# 21. AI Safety / Control Boundary
-
-Generative AI should **not** directly manipulate raw actuators.
-
-Preferred flow:
-
-```text
-AI Agent
-   ↓
-Validated Manufacturing Intent
-   ↓
-Policy / Safety Gate
-   ↓
-Manufacturing Service
-   ↓
-Robot / CNC / AM Controller
-```
-
-Not:
-
-```text
-LLM
- ↓
-raw spindle / motor / heater command
-```
-
-Hard real-time and safety-critical machine control should remain deterministic and independently validated.
-
----
-
-# 22. Local AI Model Routing
-
-```text
-Engineering Request
-       |
-       v
-   Model Router
-       |
- +-----+----------------+----------------+
- |                      |                |
- v                      v                v
-Local                 Private         Deterministic
-gpt-oss-20b           gpt-oss-120b   Solver / Simulator
-Ollama/llama.cpp      vLLM           CAMotics / ExaCA /
-                                      FactorySimPy / Twin
-```
-
-Routing rules:
-
-- use deterministic simulation for manufacturing physics;
-- use local LLMs for private documentation/RAG;
-- use high-capacity private inference for complex reasoning;
-- keep cloud inference optional;
-- log all model/tool decisions.
-
----
-
-# 23. Digital Thread Architecture
-
-A microfactory needs a continuous engineering-to-production information chain.
-
-```text
-Requirements
-    ↓
-MBSE
-    ↓
-CAD
-    ↓
-CAM / Slicing
-    ↓
-Manufacturing Process Model
-    ↓
-Machine / Robot Program
-    ↓
-Simulation
-    ↓
-Deployment
-    ↓
-Production
-    ↓
-Telemetry
-    ↓
-Digital Twin
-    ↓
-MES / OEE / CMMS
-    ↓
-AI Optimization
-    ↓
-Updated Engineering Decision
-```
-
----
-
-# 24. Alternative Architecture Profiles
-
-## Profile A — Additive Microfactory
-
-```text
-CAD
- ↓
-ORNLSlicer
- ↓
-JAX AM Simulation
- ↓
-ExaCA
- ↓
-libSLM / Machine Adapter
- ↓
-OpenTwin
- ↓
-IndustryFusion
- ↓
-MES / OEE
-```
-
-**Best for:** additive and metal-AM research/production cells.
-
----
-
-## Profile B — Hybrid Additive / CNC
-
-```text
-CAD
- ↓
-ORNLSlicer
- ↓
-Additive Process
- ↓
-ASMBL Workflow
- ↓
-CNC Program
- ↓
-CAMotics Validation
- ↓
-Physical Cell
-```
-
-**Best for:** hybrid manufacturing and precision finishing.
-
----
-
-## Profile C — Robotic Microfactory
-
-```text
-Production Order
-       ↓
-FactorySimPy
-       ↓
-Task Planning
-       ↓
-open-microfactory
-       ↓
-OpenFactory
-       ↓
-IndustryFusion
-       ↓
-OpenTwin
-```
-
-**Best for:** flexible robotic assembly cells.
-
----
-
-## Profile D — Digital-Twin Factory
-
-```text
-Physical Assets
-      ↓
-IndustryFusion
-      ↓
-Process Data Twin
-      ↓
-OpenTwin / CoFmuPy
-      ↓
-FactorySimPy
-      ↓
-AI Analytics
-      ↓
-MES / BaseEAM
-```
-
-**Best for:** operations, predictive maintenance and performance optimization.
-
----
-
-## Profile E — Fully Open Microfactory Research Stack
-
-```text
-Capella
-  ↓
-CAD Model
-  ↓
-ORNLSlicer / CAMotics
-  ↓
-ExaCA / PeriLab
-  ↓
-FactorySimPy
-  ↓
-OpenFactory
-  ↓
-IndustryFusion
-  ↓
-OpenTwin / CoFmuPy
-  ↓
-Libre / BaseEAM
-  ↓
-Open AI Layer
-```
-
-**Best for:** research and education with minimal proprietary lock-in.
-
----
-
-# 25. Strategic Prioritization
-
-## Priority 1 — Core / Highest Value
-
-- ORNLSlicer
-- CAMotics
-- FactorySimPy
-- IndustryFusion
-- OpenFactory
-- OpenTwin
-- CoFmuPy
-- open-microfactory
-
-These form the strongest backbone for an open microfactory platform.
-
----
-
-## Priority 2 — Process / Physics Extensions
-
-- ExaCA
-- PeriLab
-- JAX additive-manufacturing simulation
-- libSLM
-- ASMBL
-- IceSL-vrprinter
-
----
-
-## Priority 3 — Operations / Enterprise Extensions
-
-- Libre
-- BaseEAM
-- Open Factory Twin
-- IndustryFusion Process Data Twin
-- Open Industry Project
-- OEE/CMMS platforms
-
----
-
-## Priority 4 — Optional / Research / External
-
-- Open Drone project — exact upstream verification
-- Digital Twin as a Service — exact upstream verification
-- generic Manufacturing Efficiency & Maintenance platform — exact upstream verification
-- Factory I/O — commercial external reference
-- Abaqus WeldToolkit — commercial external reference
-
----
-
-# 26. Value Matrix
-
-| Component | Domain | Strategic Value | Preferred Role |
-|---|---|---:|---|
-| ORNLSlicer | Additive CAM | 5/5 | Primary slicer/toolpath |
-| CAMotics | CNC Simulation | 5/5 | CNC verification |
-| ASMBL | Hybrid Manufacturing | 4/5 | Additive/subtractive workflow |
-| IceSL-vrprinter | G-code | 3/5 | Visualization/verification |
-| JAX AM Simulation | AM Physics/AI | 4/5 | Differentiable process simulation |
-| ExaCA | Materials | 5/5 | Solidification/microstructure |
-| PeriLab | Mechanics | 4/5 | Damage/fracture |
-| libSLM | Metal AM | 4/5 | SLM machine integration |
-| Abaqus WeldToolkit | Welding/AM | 2/5 open-stack fit | External validation |
-| BaseEAM | EAM/CMMS | 4/5 | Asset maintenance |
-| OEE/CMMS software | Operations | 4/5 | Performance/maintenance |
-| DTaaS | Digital Twin | 4/5 | Service pattern |
-| CoFmuPy | Digital Twin/FMU | 5/5 | Lightweight twin integration |
-| OpenTwin | Digital Twin | 5/5 | Twin platform |
-| FactorySimPy | DES | 5/5 | Production-flow simulation |
-| IndustryFusion | IIoT | 5/5 | Connectivity/data twin |
-| IndustryFusion PDT | Data Twin | 5/5 | Semantic process-data twin |
-| OpenFactory | Industrial DevOps | 5/5 | Deployment/coordination |
-| Open Factory Twin | Factory Twin | 4/5 | Production/logistics twin |
-| Open Industry Project | Manufacturing Apps | 4/5 | Warehouse/manufacturing framework |
-| Factory I/O | Automation Simulation | 2/5 open-stack fit | External training adapter |
-| open-microfactory | Robotics | 5/5 | Robotic assembly |
-| Libre | MES/OEE | 5/5 | Execution/performance |
-| Manufacturing Efficiency Platform | MES/CMMS | 3/5 | Candidate pending upstream |
-| Generic DES | Simulation | 5/5 methodology | Replaceable simulation contract |
-| Open Drone project | Robotics/Mobility | 3/5 | Research pending upstream |
-
----
-
-# 27. Recommended MVP
-
-The MVP should integrate only the minimum components needed to demonstrate the complete digital thread.
-
-```text
-Product / Part Definition
-        ↓
-ORNLSlicer OR CNC G-code
-        ↓
-CAMotics / Toolpath Validation
-        ↓
-FactorySimPy
-        ↓
-OpenTwin / CoFmuPy
-        ↓
-IndustryFusion
-        ↓
-OpenFactory
-        ↓
-Libre / BaseEAM
-        ↓
-AI Engineering Copilot
-```
-
-### MVP Capabilities
-
-- define a microfactory process;
-- generate or ingest manufacturing toolpaths;
-- validate CNC/additive paths;
-- simulate production flow;
-- model machines, queues, conveyors and robotic fleets;
-- expose factory telemetry;
-- maintain a synchronized digital-twin representation;
-- deploy validated configurations;
-- calculate production KPIs;
-- track maintenance;
-- query the factory through an AI/RAG interface;
-- compare alternative schedules/configurations.
-
----
-
-# 28. MVP Phase 2 — Robotic Cell
-
-Add:
-
-```text
-open-microfactory
-      +
-OpenFactory
-      +
-IndustryFusion
-      +
-OpenTwin
-```
-
-Capabilities:
-
-- digital robot/cell definition;
-- simulation-before-deployment;
-- task execution through bounded interfaces;
-- telemetry capture;
-- twin synchronization;
-- performance analysis.
-
----
-
-# 29. MVP Phase 3 — Advanced Additive Manufacturing
-
-Add:
-
-```text
-ORNLSlicer
-   +
-JAX AM Simulation
-   +
-ExaCA
-   +
-PeriLab
-   +
-libSLM
-```
-
-This creates a multi-scale chain:
-
-```text
-Geometry
-  ↓
-Toolpath
-  ↓
-Thermal / Process Simulation
-  ↓
-Solidification / Microstructure
-  ↓
-Damage / Structural Assessment
-  ↓
-Machine Execution
-```
-
----
-
-# 30. Recommended Interfaces
-
-To preserve replaceability:
-
-| Boundary | Preferred Contract |
+| Responsibility | Proposed JFXOSMS adaptation |
 |---|---|
-| CAD → CAM | STEP/STL/3MF + metadata |
-| CAM → machine | G-code / machine adapter |
-| Simulation → Twin | FMI/FMU, REST, events |
-| Machine → IIoT | MQTT / OPC UA / adapters |
-| Twin → AI | REST/OpenAPI/MCP |
-| MES → Twin | Events / API |
-| CMMS → Asset | Asset IDs / work-order API |
-| AI → Tool | MCP / bounded service API |
-| Deployment → Asset | Declarative config / GitOps |
-| Analytics → Data | SQL / Parquet / time-series API |
+| Material-state input | Translate warehouse stock, reservations, in-transit orders, forecasts, and lead times into a versioned planning snapshot |
+| Policy input | Map per-SKU observations to the trained feature contract |
+| Policy output | Obtain nonnegative safety-stock targets for each modeled stage |
+| Optimization | Combine targets and demand with shared resource constraints to generate feasible order proposals |
+| Review and release | Attach costs, service estimates, and feasibility evidence to a material-plan revision |
+| Feedback | Reconcile received quantities and realized demand with the next planning snapshot |
 
-Specific protocol choices must be validated against each upstream component.
+The [training connector][inventory-training] exposes observations including `transit_orders`, `demand_actual`, `demand_forecast`, `demand_sigma`, `inventory`, `leads`, and the missed-sale-to-holding-cost ratio. Its policy actions include `safety_stock_stage0` through `safety_stock_stage2`. The adapter must preserve stage ordering, forecast-window lengths, and units.
 
----
+**Proposed microfactory extensions**
 
-# 31. MBSE → CAD → CAM → CAS Mapping
+- Map raw materials, consumables, work in progress, and finished goods to explicit SKU and location identities.
+- Deduct reservations consistently and associate demand with production-plan revisions.
+- Model supplier calendars, batch sizes, shelf-life constraints, and bill-of-material consumption only after adding corresponding simulator behavior.
+- Compare a deterministic policy, optimization alone, and learned safety stock plus optimization on the same scenarios.
 
-```text
-MBSE
-Arcadia / Capella
-System, factory and cell architecture
-         ↓
-CAD
-Parts, fixtures, cells and layouts
-         ↓
-CAM
-ORNLSlicer / CNC programs / ASMBL
-         ↓
-CAS
-CAMotics
-FactorySimPy
-ExaCA / PeriLab
-OpenTwin / CoFmuPy
-         ↓
-Physical Deployment
-OpenFactory / IndustryFusion
+A proposed business objective is to minimize holding cost, missed-demand cost, and any explicitly modeled ordering or expediting costs, subject to material and resource constraints. Extra cost terms are JFXOSMS extensions; they must not be reported as implemented source features.
+
+**Implementation constraints**
+
+The [solver source][inventory-solver] explicitly notes fixed-lead-time support, while the guide identifies variable-lead-time training as experimental and unvalidated. The first integration should therefore use fixed lead times.
+
+The source connector also contains constraint-relaxation and fallback paths. JFXOSMS must independently check the final order proposal and reject violations of non-negotiable limits. A relaxed solver result is not evidence of operational feasibility. Some solver variables are continuous: conversion to actual order quantities must include pack-size or integer constraints and a subsequent feasibility check.
+
+**Fallback:** retain a validated deterministic replenishment policy. If no feasible plan exists, return the infeasibility and affected demand to the planner rather than silently releasing an arbitrary order.
+
+<a id="line-block"></a>
+
+### 6.2 Manufacturing-Line Optimization Development Block
+
+**Source:** [sdk2035/bonsai-ManufacturingLineOptimization][line] · [Simulator connector][line-connector]
+
+The source uses a numerical production-line simulator with machines, conveyors, buffer conditions, downtime, and speed decisions. It supports comparison of learned and heuristic policies. The inspected [layout configuration][line-layout] sets `K = 12`; [the Inkling policy schema][line-inkling] also fixes twelve machine actions. Changing topology therefore requires coordinated updates to the simulator, policies, schemas, and trained model.
+
+| Item | Proposed integration treatment |
+|---|---|
+| Observations | Machine states, actual speeds, proximity indicators, and the permitted operational subset of simulator state |
+| Actions | Map source fields `m0` … `m11` to stable machine IDs and validated speed units |
+| Decision timing | Support a configured fixed, event-driven, or combined supervisory cadence |
+| Objective | Compare good-output throughput against downtime, buffering, quality, and resource constraints that are explicitly modeled |
+| Output | Candidate speed vector plus the actual vector accepted by the simulator or controller |
+| Baselines | Evaluate the source max-speed, bottleneck-speed, and proximity-based heuristics |
+
+The [source policies][line-policies] contain those baseline functions and fixed machine-speed arrays. Their limits are benchmark parameters, not ratings for a real production machine.
+
+**Required extensions for JFXOSMS**
+
+1. Calibrate processing times, conveyor capacities, startup behavior, and failure distributions against a chosen cell.
+2. Separate simulator-only information from deployable observations. Do not train on future downtime or exact buffer information that an installed sensor system cannot provide.
+3. Record units and conversions explicitly; resolve the source's mixture of unitless simulation steps and documented time intervals.
+4. Add constrained rate changes, equipment availability, and output-quality criteria appropriate to the selected process.
+5. Publish both recommended and applied actions, including any controller override.
+
+A proposed evaluation objective balances **good production output**, starvation, blocking, excessive work in progress, and action changes. Energy, scrap, and tool-wear terms should be added only when the simulator and measurements support them. These additions are not already delivered by the example.
+
+The original repository discusses a sample throughput improvement. That result is not a JFXOSMS performance promise and is not adopted as a release target. Local evidence must compare candidate and baseline policies under matched scenarios.
+
+**Fallback:** use the commissioned deterministic supervisory strategy. Loss of inference must not disable equipment interlocks or change the controller's established protective behavior.
+
+<a id="decision-support-block"></a>
+
+### 6.3 Decision-Support Development Block
+
+**Source:** [sdk2035/bonsai-decision-support-interface][decision] · [UI source][decision-ui]
+
+The repository offers an experimental Streamlit application that obtains a brain schema, accepts state values, requests an action, and displays a state/action history with CSV export. It is a useful presentation prototype.
+
+The [current UI][decision-ui] creates scalar numeric widgets, while the inventory and line packages use array-valued observations. Therefore, connecting these packages requires an array-aware form or a versioned flattening adapter; the source UI is not a ready-made front end for either simulator.
+
+**Proposed workspace capabilities**
+
+| View | Purpose |
+|---|---|
+| Scenario selection | Choose facility, line, SKU group, horizon, and data revision |
+| Input inspection | Show observed values, units, age, source, and missing-data warnings |
+| Policy comparison | Compare deterministic, solver-only, and learned-policy alternatives |
+| Material planning | Inspect stock targets, order proposals, service estimates, and binding limits |
+| Production supervision | Compare candidate and accepted machine speeds with line KPIs |
+| Decision review | Approve, reject, or request a revised proposal within the user's assigned authority |
+| History and evidence | Retrieve scenarios, policy versions, constraints, decisions, and actual outcomes |
+
+Authentication, authorization, durable audit records, approval workflows, and production-grade networking are proposed additions. A local CSV export alone does not satisfy these responsibilities.
+
+**Protocol compatibility matters:** the [decision-support client][decision-client] uses `GET /validation.json` and a `GET` request with a JSON body to `/v1/prediction`. The [inventory policy client][inventory-policies] uses `POST` for prediction. JFXOSMS should expose one normalized interface and implement a tested, per-provider translation behind it. Do not assume that changing the base URL makes the clients interchangeable.
+
+<a id="middleware-contracts"></a>
+
+## 7. Middleware and Service Contracts
+
+Introduce a small shared integration layer with explicit component ownership.
+
+| Proposed service | Responsibility | Boundary |
+|---|---|---|
+| Scenario Registry | Store scenario definitions, input hashes, revisions, and seeds | Does not modify source system records |
+| Simulation Adapter | Normalize reset, observation, step, and result handling | Owns one simulator instance per run |
+| Policy Gateway | Route requests to a baseline, local learned policy, or compatible exported brain | Does not independently release operational actions |
+| Inventory Optimizer | Convert safety-stock targets into coordinated order proposals | Returns feasibility status and binding constraints |
+| Planning Coordinator | Reconcile material plans and production capacity | Prevents incompatible plan revisions from being combined |
+| Decision and Audit Service | Record review, approval, rejection, expiry, and applied results | Separates proposal from execution authority |
+| Operations Adapters | Exchange validated events and requests with MES, warehouse, or maintenance systems | Enforce idempotency and source-system ownership |
+
+### Proposed API surface
+
+These endpoints are a design contract; they are not claims about existing upstream endpoints.
+
+| Method and path | Purpose |
+|---|---|
+| `POST /api/v1/scenarios` | Register a versioned scenario and its input references |
+| `POST /api/v1/simulation-runs` | Start a scenario with a selected simulator and policy revision |
+| `GET /api/v1/simulation-runs/{run_id}` | Retrieve progress, termination reason, and results |
+| `POST /api/v1/recommendations` | Request an advisory inventory or line recommendation |
+| `GET /api/v1/recommendations/{recommendation_id}` | Inspect the proposal and supporting evaluation |
+| `POST /api/v1/recommendations/{recommendation_id}/decisions` | Record an authorized approval, rejection, or requested revision |
+| `GET /api/v1/policies/{policy_id}/schema` | Retrieve observation, action, and compatibility definitions |
+
+All mutations should use idempotency keys. Decision endpoints must verify recommendation expiry and the expected plan revision. An approval records authority; execution still passes through the responsible operational service.
+
+### Example recommendation envelope
+
+The following example is **illustrative proposed JSON**, with synthetic data and no real order or machine instruction:
+
+```json
+{
+  "schema_version": "jfxosms.recommendation.v1",
+  "recommendation_id": "rec-demo-001",
+  "scenario_id": "scenario-demo-001",
+  "plan_revision": "plan-demo-r3",
+  "block": "AI-INV",
+  "mode": "advisory",
+  "observed_at": "2026-09-15T10:00:00Z",
+  "valid_until": "2026-09-15T10:15:00Z",
+  "policy": {
+    "id": "inventory-baseline-demo",
+    "version": "0.1.0",
+    "provider": "local"
+  },
+  "input_snapshot": {
+    "id": "materials-demo-r7",
+    "freshness": "valid",
+    "unit_profile": "items-and-days"
+  },
+  "proposal": {
+    "sku_id": "SKU-DEMO-01",
+    "safety_stock_by_stage": [12, 18, 24],
+    "order_requests": [
+      {
+        "stage_id": "stage-0",
+        "quantity": 30,
+        "unit": "item"
+      }
+    ]
+  },
+  "feasibility": {
+    "status": "feasible",
+    "constraint_set_id": "limits-demo-r2",
+    "violations": []
+  },
+  "approval": {
+    "status": "pending",
+    "required_role": "materials_planner"
+  }
+}
 ```
 
-This preserves the project structure while making CAS a true **multi-domain simulation and digital-twin layer**.
+The release schema must additionally define required fields, numeric bounds, units, time zones, permissible states, and error responses. Cost estimates and predictive intervals belong to separately identified evaluation evidence; do not insert an uncalibrated model “confidence” score.
 
----
+### Schema and adapter rules
 
-# 32. Suggested Repository Structure
+- Attach stable IDs to SKUs, stages, machines, conveyors, assets, and facilities.
+- Version feature order, array dimensions, normalization, missing-data treatment, and action mappings with the model artifact.
+- Reject stale, out-of-order, incompatible, or non-finite inputs before inference.
+- Enforce request deadlines and distinguish provider failure, invalid input, infeasibility, and evaluation failure.
+- Isolate stateful policy sessions by scenario and episode. The inventory example includes a memory-reset function; validate the actual exported artifact's lifecycle rather than sharing memory across runs.
+- Keep original HTTP methods confined to their compatibility adapters.
 
-```text
-jfxosms/
-├── README.md
-├── docs/
-│   ├── architecture/
-│   ├── compendium/
-│   ├── digital-thread/
-│   ├── ai/
-│   ├── iiot/
-│   ├── manufacturing/
-│   └── validation/
-│
-├── MBSE/
-│   ├── Capella/
-│   ├── CAD/
-│   ├── CAM/
-│   └── CAS/
-│
-├── manufacturing/
-│   ├── additive/
-│   │   ├── ornlslicer/
-│   │   ├── exaca/
-│   │   ├── perilab/
-│   │   └── libslm/
-│   ├── cnc/
-│   │   └── camotics/
-│   └── hybrid/
-│       └── asmbl/
-│
-├── robotics/
-│   ├── open-microfactory/
-│   └── drone/
-│
-├── simulation/
-│   ├── factorysimpy/
-│   ├── des/
-│   ├── process-physics/
-│   └── validation/
-│
-├── digital-twin/
-│   ├── opentwin/
-│   ├── cofmupy/
-│   ├── factory-twin/
-│   └── dtaas/
-│
-├── industrial-platform/
-│   ├── industryfusion/
-│   ├── openfactory/
-│   └── open-industry/
-│
-├── operations/
-│   ├── mes/
-│   ├── oee/
-│   └── cmms/
-│
-├── ai/
-│   ├── agents/
-│   ├── rag/
-│   ├── model-router/
-│   └── optimization/
-│
-└── tests/
-    ├── simulation/
-    ├── manufacturing/
-    ├── twin/
-    └── integration/
-```
+<a id="coordinated-workflow"></a>
 
----
+## 8. Coordinated Inventory and Production Workflow
 
-# 33. Roadmap
+The integration should reconcile two interacting planning loops without assuming they run at the same frequency.
 
-## Phase 1 — Digital Manufacturing Foundation
-- MBSE mapping;
-- ORNLSlicer;
-- CAMotics;
-- common manufacturing data model.
+| Loop | Proposed initial cadence | Decision | Responsible system |
+|---|---|---|---|
+| Material planning | Per planning cycle, shift, or relevant supply event | Stock targets, replenishment proposals, available-to-produce quantities | Materials planner and enterprise workflow |
+| Production planning | Per dispatch or capacity revision | Feasible batches, sequence, and resource allocation | Planning coordinator and MES |
+| Line supervision | Validated simulator interval or equipment event | Candidate machine-speed settings | Supervisory service |
+| Equipment control | Controller-defined cycle | Low-level actuation and protective behavior | Machine or robot controller |
 
-## Phase 2 — Factory Simulation
-- FactorySimPy;
-- DES abstractions;
-- KPI framework.
+Cadences are design choices to be calibrated; they are not measured performance claims.
 
-## Phase 3 — Digital Twin
-- OpenTwin;
-- CoFmuPy;
-- FMI/FMU;
-- telemetry model.
+### Proposed end-to-end sequence
 
-## Phase 4 — IIoT
-- IndustryFusion;
-- Process Data Twin;
-- machine/asset adapters.
+1. Read a consistent demand, stock, reservation, equipment, and maintenance snapshot.
+2. Generate an inventory proposal and identify available material envelopes.
+3. Evaluate production scenarios against those envelopes and current equipment capacity.
+4. Use the line block to compare permitted supervisory policies within each scenario.
+5. Return achievable throughput and material-consumption estimates to the planning coordinator.
+6. Reconcile the material and production plans, using a bounded number of planning iterations and a documented feasibility tolerance.
+7. Present the alternatives, constraint results, and uncertainty evidence in the decision workspace.
+8. Release an approved plan through the relevant enterprise or execution adapter.
+9. Record actual receipts, consumption, production, and overrides for reconciliation and later evaluation.
 
-## Phase 5 — Physical Deployment
-- OpenFactory;
-- declarative asset configuration;
-- simulation-before-deployment.
+If coordination fails to converge, return the unresolved material or capacity conflict for review. Do not publish mutually incompatible plans.
 
-## Phase 6 — Operations
-- Libre;
-- BaseEAM;
-- OEE/CMMS;
-- work-order and maintenance integration.
+**Illustrative microfactory scenario:** material delivery is delayed while a packaging machine experiences downtime. The inventory block revises replenishment proposals; the production coordinator reduces or reschedules affected batches; the line block evaluates supervisory settings for feasible batches. The operator sees the combined delivery and throughput consequences before releasing the revised plan. This is a proposed scenario, not a reported deployment.
 
-## Phase 7 — Robotic Microfactory
-- open-microfactory;
-- task planning;
-- bounded physical execution.
+<a id="engineering-ai"></a>
 
-## Phase 8 — Advanced AM Physics
-- JAX simulation;
-- ExaCA;
-- PeriLab;
-- libSLM.
+## 9. AI Engineering and Knowledge Services
 
-## Phase 9 — AI Optimization
-- RAG;
-- agent orchestration;
-- local/private inference;
-- scheduling;
-- anomaly detection;
-- predictive maintenance.
+The existing engineering-copilot direction remains useful for requirements, documentation, scenario preparation, and analysis.
 
----
+| AI capability | Proposed use | Required evidence or limit |
+|---|---|---|
+| Engineering retrieval | Find manuals, process assumptions, and validation reports | Cite document revision and relevant passage |
+| Scenario assistance | Draft demand or downtime experiments | Validate parameters against the simulator schema |
+| Experiment orchestration | Run approved simulator and solver tools | Use bounded tool APIs and resource limits |
+| Result explanation | Summarize cost, throughput, and constraint differences | Derive numeric claims from recorded results |
+| Maintenance analysis | Connect condition records with work-order history | Keep maintenance release in the responsible workflow |
+| Report generation | Prepare engineering and operator summaries | Preserve scenario, model, and source references |
 
-# 34. Final Alternative Architecture
+Local or private inference can support documentation retrieval and analysis. Deterministic solvers should compute numerical feasibility. Learned policies should produce actions only within their declared observation and action contracts.
 
-```text
-                      JFXOSMS
-                         |
-              AI ENGINEERING COPILOT
-                         |
-                 MBSE / DIGITAL THREAD
-                         |
-       +-----------------+------------------+
-       |                 |                  |
-       v                 v                  v
- ADDITIVE CAM         CNC CAM           ROBOTICS
- ORNLSlicer          CAMotics       open-microfactory
-       |                 |                  |
-       +-----------------+------------------+
-                         |
-                         v
-              PROCESS PHYSICS / V&V
-            JAX / ExaCA / PeriLab
-                         |
-                         v
-               FACTORY SIMULATION
-                  FactorySimPy
-                         |
-                         v
-                  DIGITAL TWIN
-              OpenTwin / CoFmuPy
-                         |
-                         v
-             INDUSTRIAL DATA / IIoT
-                 IndustryFusion
-                         |
-                         v
-              PHYSICAL DEPLOYMENT
-                   OpenFactory
-                         |
-                         v
-             MES / OEE / MAINTENANCE
-               Libre / BaseEAM
-                         |
-                         v
-                AI OPTIMIZATION LOOP
-```
+### Proposed open local learning path
 
----
+[Gymnasium][gymnasium] provides an environment API and [Stable-Baselines3][sb3] provides reinforcement-learning implementations. Both repositories publish MIT licenses. They are proposed complementary development dependencies, not existing JFXOSMS integrations.
 
-# 35. Strategic Recommendation
+Develop separate environment wrappers for inventory and line simulation. A first local experiment may use PPO with a fixed-dimensional numeric observation vector and bounded action representation. For inventory, transform candidate stock levels through the validated optimization stage. For line supervision, train and evaluate with the same action constraints and fallback behavior that serving will use.
 
-The strongest **open architecture backbone** from the source list is:
+A local retraining path does not automatically execute Inkling curricula or convert a Bonsai exported brain. Translate curriculum logic, reset behavior, rewards, constraints, and termination conditions into explicit local configuration, then verify comparable scenario behavior.
 
-```text
-ORNLSlicer
-    +
-CAMotics
-    +
-FactorySimPy
-    +
-OpenTwin / CoFmuPy
-    +
-IndustryFusion
-    +
-OpenFactory
-    +
-open-microfactory
-    +
-Libre / BaseEAM
-```
+<a id="simulation-consistency"></a>
 
-with **ExaCA, PeriLab, JAX AM simulation and libSLM** added when advanced additive-manufacturing physics is required.
+## 10. Digital Twin and Simulation Consistency
 
-**Factory I/O** and **Abaqus WeldToolkit** should remain external validation/training integrations rather than mandatory core components, preserving an architecture that can be independently implemented with open alternatives.
+The twin should retain three distinct views: **observed state**, **simulated state**, and **proposed state**. Every recommendation must identify the view and snapshot from which it was derived.
 
-The recommended design principle is:
+| Concern | Required design treatment |
+|---|---|
+| Manufacturing representations | Relate requirements, part revisions, toolpaths, process models, and factory operations through persistent IDs |
+| Material balance | Reconcile receipts, consumption, scrap, transfers, and finished output using explicit units and bill-of-material revisions |
+| Time management | Record wall-clock timestamps separately from simulator time and planning periods |
+| Multiple simulators | Assign ownership of each buffer and resource; avoid counting the same material in FactorySimPy and the line simulator |
+| State synchronization | Consume versioned events; detect duplicates, gaps, and stale observations |
+| Co-simulation | Use a defined stepping and synchronization contract when combining FMUs and discrete-event models |
+| Model fidelity | State which effects are represented, calibrated, omitted, or only approximated |
 
-> **Model the factory as a digital thread of replaceable services: design → manufacture → simulate → twin → deploy → operate → optimize.**
+The proposed inventory and manufacturing-line adapters do not inherently implement FMI/FMU or the OpenTwin API. Those integrations require dedicated code and compatibility tests.
 
----
+For the first integrated scenario, use one authoritative production-flow model. If FactorySimPy and the source SimPy line model are composed later, define the transfer boundary, time advance, and ownership of work in progress before coupling them.
 
-# 36. Disclaimer
+<a id="deployment-profiles"></a>
 
-This document is a proposed engineering integration architecture derived from the alternatives listed in the JFXOSMS source README.
+## 11. Deployment Profiles
 
-It does not claim that all listed upstream projects are currently integrated, mutually compatible, production-ready, actively maintained, or covered by identical licenses.
+| Profile | Components | Release boundary |
+|---|---|---|
+| A. Local baseline laboratory | Simulators, deterministic policies, inventory optimizer, scenario storage, decision workspace | Simulation and advisory use |
+| B. Local learned-policy laboratory | Profile A plus environment wrappers, local training, model registry, and inference service | Reproducible training and comparison |
+| C. Existing Bonsai artifact compatibility | Profile A plus a compatible exported brain and isolated protocol adapter | Only after artifact, runtime, schema, and access verification |
+| D. Connected shadow operation | Read-only operational adapters and live snapshots with candidate decisions logged | Operational recommendations remain unexecuted |
+| E. Reviewed operational integration | Authorized enterprise adapters and separately commissioned supervisory execution | Approval, constraint checks, expiry, rollback, and controller authority enforced |
 
-For ambiguous source-list entries, the exact upstream repository and license must be identified before implementation.
+For initial deployment, separate UI, integration API, simulator workers, optimizer, and persistence into independently managed processes or containers. Use a queue only when run concurrency requires it. A single-host deployment can establish the contracts before introducing a multi-node platform.
 
-Manufacturing simulations, toolpaths, robotic workflows, AI recommendations, digital twins, and automated deployments require independent validation before operational or safety-critical use.
+Linux and Docker are candidate deployment foundations. Kubernetes or k3s and GitOps-style configuration management remain optional scale-out choices; select and qualify them according to the operational footprint.
+
+The historical requirements include older NumPy, pandas, Streamlit, and Bonsai SDK versions. Isolate a reproducibility environment from the modernization branch. Do not combine all legacy dependency files into one environment or present their installation as validated on a current runtime.
+
+For connected profiles, add authenticated access, service identities, encrypted transport, audit retention, and separation between simulation and execution networks. Credentials should be supplied through an appropriate secret mechanism, not copied from repository environment files.
+
+<a id="evaluation"></a>
+
+## 12. Evaluation and Measurable Outcomes
+
+No improvement percentage is promised by this proposal. Compare alternatives under the same demand, equipment, and resource scenarios.
+
+| Domain | Metrics | Comparison |
+|---|---|---|
+| Inventory | Holding cost, missed-demand cost, fill rate, stockout duration, capacity violations | Deterministic replenishment; optimizer alone; learned stock policy plus optimizer |
+| Manufacturing line | Good units per simulated time, blocking, starvation, work in progress, downtime | Source heuristics and commissioned baseline versus candidate policy |
+| Joint planning | On-time feasible production, material-plan consistency, total modeled operating cost | Independent decisions versus coordinated plans |
+| Decision support | Input completeness, review duration, decision traceability, override reasons | Existing review process versus the proposed workspace |
+| Integration | Invalid-action rejection, stale-input handling, deadline failures, recovery behavior | Required interface and fallback cases |
+
+Define **fill rate** as fulfilled demand units divided by requested demand units for the selected horizon. Define **good throughput** using accepted units rather than all produced units. OEE reporting requires separately defined availability, performance, and quality inputs; throughput alone is insufficient.
+
+### Evaluation protocol
+
+1. Establish reproducible baseline runs with fixed dataset and simulator revisions.
+2. Split training, validation, and evaluation scenarios to avoid tuning on release cases.
+3. Use matched random seeds when comparing policies, including demand spikes, equipment outages, and scarce-resource cases.
+4. Report per-scenario outcomes and paired differences, with intervals appropriate to independent runs or episodes.
+5. Select the number of runs based on variance and the decision being made; do not treat a single training curve as deployment evidence.
+6. Evaluate invalid inputs, provider timeouts, infeasible plans, unavailable sensors, and expired approvals.
+7. Progress from simulation to read-only shadow operation before enabling reviewed operational requests.
+
+The source inventory assessment configuration and historical reported results are useful starting points, but they are not a validated JFXOSMS benchmark. Preserve the new benchmark definitions and full run records.
+
+<a id="requirements"></a>
+
+## 13. Engineering Requirements and Acceptance Criteria
+
+These are proposed requirements for implementation and review.
+
+| ID | Requirement | Acceptance evidence |
+|---|---|---|
+| `REQ-01` | Track every recommendation to a scenario, observation snapshot, policy version, and constraint revision | Retrieve the complete lineage for a sampled recommendation |
+| `REQ-02` | Reject incompatible dimensions, missing required fields, invalid units, and non-finite values | Contract cases fail explicitly before inference |
+| `REQ-03` | Preserve inventory capacity and authorized order constraints after optimization and quantity conversion | Infeasible and relaxed source results cannot be released |
+| `REQ-04` | Map line-policy actions to named equipment and valid supervisory ranges | Boundary, unavailable-machine, and action-rate cases follow the configured response |
+| `REQ-05` | Keep review and execution authority distinct | An unapproved, expired, or superseded proposal cannot generate an operational request |
+| `REQ-06` | Provide a documented deterministic fallback for each decision block | Provider failure triggers the selected fallback or a reviewed hold |
+| `REQ-07` | Isolate scenario, episode, and stateful-model sessions | Interleaved runs do not contaminate one another |
+| `REQ-08` | Support local baseline evaluation without a Bonsai workspace | Run the baseline benchmark in the local deployment profile |
+| `REQ-09` | Prevent duplicated enterprise requests | Repeating an idempotency key creates no duplicate order or execution intent |
+| `REQ-10` | Distinguish observed, simulated, recommended, and applied state | UI and audit records show the corresponding state and revision |
+| `REQ-11` | Preserve deterministic controller and protective-function authority | The integration cannot bypass commissioned machine protections |
+| `REQ-12` | Promote a model only with baseline comparison and reproducibility evidence | Release record contains benchmark results, limits, and rollback policy |
+
+Latency, reliability, and resource targets must be derived from the selected planning and supervisory horizons. This document does not invent hardware-independent timing guarantees.
+
+<a id="roadmap"></a>
+
+## 14. MVP and Delivery Roadmap
+
+| Phase | Development scope | Exit condition |
+|---|---|---|
+| 0. Source qualification | Pin revisions, inspect licenses, isolate dependencies, recover actual schemas | Reproducible source baseline and dependency inventory |
+| 1. Simulation foundation | Connect one material scenario and one production line to the shared scenario contract | Repeatable runs with material and time consistency |
+| 2. Deterministic decision baseline | Implement optimizer-only inventory and heuristic line policies | Baseline metrics and infeasibility behavior recorded |
+| 3. Decision workspace | Extend typed input handling, comparisons, durable history, and review | Operator can inspect and decide on a complete proposal |
+| 4. Local learning | Build environment wrappers and train bounded candidate policies | Reproducible held-out comparisons against the baseline |
+| 5. Coordinated planning | Reconcile inventory envelopes, capacity, and production revisions | Joint scenarios produce consistent material and production plans |
+| 6. Connected shadow evaluation | Ingest operational data without releasing model actions | Data quality, mismatch, and override evidence reviewed |
+| 7. Reviewed operational release | Implement authorized enterprise requests and commissioned supervision | Acceptance criteria, fallback, and rollback evidence approved |
+
+**Recommended MVP:** one configurable line, a small explicitly defined SKU set, fixed lead times, a deterministic baseline, the hybrid inventory experiment, the line-policy comparison, and a decision workspace. Its completion criterion is a reproducible and reviewable workflow.
+
+The original manufacturing expansions remain available after that foundation: a robotic cell using open-microfactory and deployment adapters; and advanced additive-process studies involving ORNLSlicer, a verified JAX simulation project, ExaCA, PeriLab, and libSLM. Their integration should be driven by the selected microfactory's requirements.
+
+<a id="repository-organization"></a>
+
+## 15. Proposed Repository Organization
+
+The following paths describe planned implementation areas. They are not a claim that these directories already exist.
+
+| Proposed path | Contents |
+|---|---|
+| `README.md` | This consolidated project description and navigation |
+| `MBSE/` | Requirements, architecture models, CAD/CAM/CAS assets, and traceability |
+| `docs/architecture/` | Boundaries, decisions, deployment profiles, and component maps |
+| `docs/compendium/` | Component identities, licenses, adoption status, and alternatives |
+| `docs/evaluation/` | Benchmark definitions, reports, and model-release evidence |
+| `contracts/` | Versioned observation, action, scenario, and recommendation schemas |
+| `adapters/inventory/` | Source simulator and optimizer integration |
+| `adapters/manufacturing-line/` | Line simulator, action mapping, and baseline-policy integration |
+| `adapters/bonsai-exported-brain/` | Artifact-specific HTTP and lifecycle compatibility |
+| `adapters/operations/` | MES, material-system, maintenance, and industrial data adapters |
+| `simulation/` | Scenario runners, process models, factory models, and calibrations |
+| `digital-twin/` | State ownership, synchronization, and co-simulation adapters |
+| `services/policy-gateway/` | Policy routing, validation, deadlines, and fallback behavior |
+| `services/planning-coordinator/` | Material and capacity reconciliation |
+| `services/decision-audit/` | Decision records, approvals, expiry, and evidence links |
+| `apps/decision-support/` | Evolved operator and engineering workspace |
+| `ai/training/` | Local environment wrappers, curricula, and training configuration |
+| `ai/engineering/` | Retrieval, bounded tools, and report-generation workflows |
+| `deploy/` | Local and connected deployment profiles |
+| `tests/contracts/` | Schema, protocol, ordering, and idempotency cases |
+| `tests/scenarios/` | Deterministic baselines and representative failure cases |
+
+Store large datasets and model artifacts in an appropriate artifact store and retain immutable identifiers in the repository. Keep credentials, personal data, and unreviewed operational exports outside version control.
+
+<a id="licensing-maintenance"></a>
+
+## 16. Licensing, Maintenance, and Adoption
+
+The three requested SDK2035 repositories publish [MIT licenses][inventory-license], with corresponding licenses in the [line repository][line-license] and [decision-support repository][decision-license]. Preserve applicable notices when redistributing source or derivative code.
+
+JFXOSMS had no repository-level license identified in the inspected tree or GitHub metadata. A maintainer should establish its intended license before distributing an implemented combined package under a single license claim.
+
+For each adopted component, record its upstream, revision, license, dependencies, local patches, and replacement strategy. Review transitive solver/runtime terms separately from the MIT licenses of the Bonsai examples. Do the same for exported brains, model weights, datasets, and external tools.
+
+Specific modernization work includes:
+
+- Reconcile imports with declared dependencies and select supported, pinned environments.
+- Replace deprecated APIs only alongside behavioral regression evidence.
+- Replace placeholder interfaces with tested schemas.
+- Correct topology assumptions, feature dimensions, and identifier mappings together.
+- Add request deadlines, provider error handling, isolated sessions, and durable decision history.
+- Keep archived upstream status distinct from the maintenance plan for the local integration.
+
+Open-source code availability does not imply availability of the historical hosted Bonsai service, compatibility of a particular exported model, or official Microsoft endorsement. Optional commercial tools retained from the original compendium should remain separately provisioned adapters.
+
+<a id="references"></a>
+
+## 17. Source References and Revision Snapshots
+
+### Primary project and requested packages
+
+| Reference | Repository and documentation | Inspected revision |
+|---|---|---|
+| JFXOSMS architecture baseline | [Project][jfxosms] · [README][base-readme] | [b04902c][jfxosms-snapshot] |
+| Inventory management | [Project][inventory] · [Nested technical guide][inventory-guide] | [842fb9e][inventory-snapshot] |
+| Manufacturing-line optimization | [Project][line] · [README][line-readme] | [bec02bd][line-snapshot] |
+| Decision-support interface | [Project][decision] · [README][decision-readme] | [62997ce][decision-snapshot] |
+
+**Review date:** 2026-09-15. Revision links below are pinned to the inspected repository commits. The current repository links remain available for navigation.
+
+### Implementation evidence
+
+| Topic | Source |
+|---|---|
+| Inventory states, stock actions, and fallback paths | [Training connector][inventory-training] |
+| Multi-SKU solver structure and fixed-lead-time note | [Inventory solver][inventory-solver] |
+| Inventory prediction method and memory reset | [Inventory policies][inventory-policies] |
+| Line simulator lifecycle | [Manufacturing connector][line-connector] |
+| Twelve-machine layout and feature/action declarations | [Layout configuration][line-layout] · [Inkling model][line-inkling] |
+| Line comparison policies | [Policy implementations][line-policies] |
+| Scalar UI controls and state/action history | [Decision-support UI][decision-ui] |
+| Legacy schema and prediction requests | [Exported-brain client][decision-client] |
+| Historical dependency declarations | [Inventory requirements][inventory-requirements] · [Line requirements][line-requirements] · [UI requirements][decision-requirements] |
+
+### Optional local-learning references
+
+- [Gymnasium repository and environment API overview][gymnasium] · [MIT license][gymnasium-license].
+- [Stable-Baselines3 repository and algorithm implementations][sb3] · [MIT license][sb3-license].
+
+### Upstream lineage
+
+The SDK2035 packages identify these Microsoft parent repositories, marked archived in the inspected metadata: [Inventory Management](https://github.com/microsoft/bonsai-InventoryManagement), [Manufacturing Line Optimization](https://github.com/microsoft/bonsai-ManufacturingLineOptimization), and [Decision Support Interface](https://github.com/microsoft/bonsai-decision-support-interface).
+
+[jfxosms]: https://github.com/robotics-intelligent-systems/jfxosms
+[jfxosms-snapshot]: https://github.com/robotics-intelligent-systems/jfxosms/tree/b04902c3ff9184e201d71915d4e58dc3ced059ae
+[base-readme]: https://github.com/robotics-intelligent-systems/jfxosms/blob/b04902c3ff9184e201d71915d4e58dc3ced059ae/README.md
+[inventory]: https://github.com/sdk2035/bonsai-InventoryManagement
+[inventory-snapshot]: https://github.com/sdk2035/bonsai-InventoryManagement/tree/842fb9e184050434b4dd83fb638032e01529522b
+[inventory-guide]: https://github.com/sdk2035/bonsai-InventoryManagement/blob/842fb9e184050434b4dd83fb638032e01529522b/bonsai/readme.md
+[inventory-training]: https://github.com/sdk2035/bonsai-InventoryManagement/blob/842fb9e184050434b4dd83fb638032e01529522b/bonsai/main_train.py
+[inventory-solver]: https://github.com/sdk2035/bonsai-InventoryManagement/blob/842fb9e184050434b4dd83fb638032e01529522b/bonsai/sims/supply_chain/mip_solver.py
+[inventory-policies]: https://github.com/sdk2035/bonsai-InventoryManagement/blob/842fb9e184050434b4dd83fb638032e01529522b/bonsai/policies.py
+[inventory-requirements]: https://github.com/sdk2035/bonsai-InventoryManagement/blob/842fb9e184050434b4dd83fb638032e01529522b/bonsai/requirements.txt
+[inventory-license]: https://github.com/sdk2035/bonsai-InventoryManagement/blob/842fb9e184050434b4dd83fb638032e01529522b/LICENSE
+[line]: https://github.com/sdk2035/bonsai-ManufacturingLineOptimization
+[line-snapshot]: https://github.com/sdk2035/bonsai-ManufacturingLineOptimization/tree/bec02bd685f42c2ac4fe730f64836746d5d1f7cf
+[line-readme]: https://github.com/sdk2035/bonsai-ManufacturingLineOptimization/blob/bec02bd685f42c2ac4fe730f64836746d5d1f7cf/README.md
+[line-connector]: https://github.com/sdk2035/bonsai-ManufacturingLineOptimization/blob/bec02bd685f42c2ac4fe730f64836746d5d1f7cf/bonsai_integration.py
+[line-layout]: https://github.com/sdk2035/bonsai-ManufacturingLineOptimization/blob/bec02bd685f42c2ac4fe730f64836746d5d1f7cf/sim/line_config.py
+[line-inkling]: https://github.com/sdk2035/bonsai-ManufacturingLineOptimization/blob/bec02bd685f42c2ac4fe730f64836746d5d1f7cf/multi_speed_12.ink
+[line-policies]: https://github.com/sdk2035/bonsai-ManufacturingLineOptimization/blob/bec02bd685f42c2ac4fe730f64836746d5d1f7cf/policies.py
+[line-requirements]: https://github.com/sdk2035/bonsai-ManufacturingLineOptimization/blob/bec02bd685f42c2ac4fe730f64836746d5d1f7cf/requirements.txt
+[line-license]: https://github.com/sdk2035/bonsai-ManufacturingLineOptimization/blob/bec02bd685f42c2ac4fe730f64836746d5d1f7cf/LICENSE
+[decision]: https://github.com/sdk2035/bonsai-decision-support-interface
+[decision-snapshot]: https://github.com/sdk2035/bonsai-decision-support-interface/tree/62997ce84c3c4c02bf0f779bfabc263faf7eca50
+[decision-readme]: https://github.com/sdk2035/bonsai-decision-support-interface/blob/62997ce84c3c4c02bf0f779bfabc263faf7eca50/README.md
+[decision-ui]: https://github.com/sdk2035/bonsai-decision-support-interface/blob/62997ce84c3c4c02bf0f779bfabc263faf7eca50/launch_decision_support.py
+[decision-client]: https://github.com/sdk2035/bonsai-decision-support-interface/blob/62997ce84c3c4c02bf0f779bfabc263faf7eca50/exported_brain_interface.py
+[decision-requirements]: https://github.com/sdk2035/bonsai-decision-support-interface/blob/62997ce84c3c4c02bf0f779bfabc263faf7eca50/requirements.txt
+[decision-license]: https://github.com/sdk2035/bonsai-decision-support-interface/blob/62997ce84c3c4c02bf0f779bfabc263faf7eca50/LICENSE
+[gymnasium]: https://github.com/Farama-Foundation/Gymnasium
+[gymnasium-license]: https://github.com/Farama-Foundation/Gymnasium/blob/main/LICENSE
+[sb3]: https://github.com/DLR-RM/stable-baselines3
+[sb3-license]: https://github.com/DLR-RM/stable-baselines3/blob/master/LICENSE
