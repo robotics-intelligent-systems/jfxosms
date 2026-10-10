@@ -1,0 +1,1066 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="JFXOSMS high-level modular engineering process" version="24.7.17" type="device">
+  <diagram id="osms-process-01" name="01 — Ciclo completo MBSE · CAD · CAM · CAS">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;01 — Ciclo completo MBSE · CAD · CAM · CAS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="Ruta de lectura: izquierda → derecha por fila. Cada liberación depende de evidencia y autoridad del dominio; IA propone y explica." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="L01" value="&lt;b&gt;L01 · 01 · Misión y necesidades&lt;/b&gt;&lt;br&gt;&lt;br&gt;Naval, mecatrónica automotriz, aeronave anfibia VTOL, automatización y alimentos. Definir usuario, escenario, entorno, capacidad y límites." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L02" value="&lt;b&gt;L02 · 02 · Requisitos y riesgos&lt;/b&gt;&lt;br&gt;&lt;br&gt;IDs, funciones, interfaces, presupuestos y aceptación. IA propone con fuentes; responsables revisan y aprueban." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L03" value="&lt;b&gt;L03 · 03 · Arquitectura modular&lt;/b&gt;&lt;br&gt;&lt;br&gt;Descomponer producto, proceso e instalaciones. Contratos mecánicos, potencia, fluidos, datos y software; variantes controladas." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L04" value="&lt;b&gt;L04 · 04 · Concepto y selección&lt;/b&gt;&lt;br&gt;&lt;br&gt;Comparar alternativas por factibilidad, masa, energía, costo, ensamblaje, mantenimiento e impacto. Gate: concepto seleccionado." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L05" value="&lt;b&gt;L05 · 05 · CAD orientado al ensamblaje&lt;/b&gt;&lt;br&gt;&lt;br&gt;Geometría paramétrica, accesibilidad, tolerancias, uniones, rutas de montaje y útiles. Definir EBOM y configuración." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L06" value="&lt;b&gt;L06 · 06 · CAS y gemelo digital&lt;/b&gt;&lt;br&gt;&lt;br&gt;Validar modelos físicos, control y flujo productivo; simular incertidumbre, fallos y restricciones de instalaciones." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L07" value="&lt;b&gt;L07 · 07 · Industrialización CAM&lt;/b&gt;&lt;br&gt;&lt;br&gt;MBOM, operaciones, robots/CNC, utillaje, inspección y recetas de proceso. Gate: diseño y plan aprobados." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L08" value="&lt;b&gt;L08 · 08 · Inventario y programación&lt;/b&gt;&lt;br&gt;&lt;br&gt;AI-INV + AI-LINE coordinan materiales y capacidad. Reservas, caducidad, disponibilidad y planes factibles; MES libera." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L09" value="&lt;b&gt;L09 · 09 · Fabricación y ensamblaje&lt;/b&gt;&lt;br&gt;&lt;br&gt;Celdas segregadas y control local. Historial de pieza/lote, cambios, mediciones y configuración as-built." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L10" value="&lt;b&gt;L10 · 10 · Integración y verificación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Inspección, pruebas, SIL/HIL y demostraciones según dominio. Retener o retrabajar desviaciones; aprobación independiente." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L11" value="&lt;b&gt;L11 · 11 · Despliegue y operación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Buque/dique; hangar/elevador/MOAB; distribución alimentaria. Autoridad humana y permisos del sitio/operación." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="L12" value="&lt;b&gt;L12 · 12 · Mantenimiento y mejora&lt;/b&gt;&lt;br&gt;&lt;br&gt;Eventos reales → comparar observado/simulado/propuesto → actualizar modelos, diseño y planes bajo control de cambios." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L01" target="L02">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L02" target="L03">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L03" target="L04">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="L04" target="L05">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="405" />
+              <mxPoint x="245" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L05" target="L06">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L06" target="L07">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L07" target="L08">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="L08" target="L09">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="245" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L09" target="L10">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L10" target="L11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L11" target="L12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e11" value="cambio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;" edge="1" parent="1" source="L12" target="L02">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="970" />
+              <mxPoint x="15" y="970" />
+              <mxPoint x="15" y="130" />
+              <mxPoint x="695" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-02" name="02 — Diseño modular del buque multipropósito">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;02 — Diseño modular del buque multipropósito" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="El diseño del buque precede a su planta alimentaria y se itera con sus cargas. No se infieren dimensiones ni capacidades de conceptos previos." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="N01" value="&lt;b&gt;N01 · Misión naval y cargas&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ayuda humanitaria, planta alimentaria, agua, logística y talleres segregados. Definir perfiles de misión y personas a bordo." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N02" value="&lt;b&gt;N02 · Arquitectura naval MBSE&lt;/b&gt;&lt;br&gt;&lt;br&gt;Casco/compartimentos, propulsión, energía, lastre, navegación, habitabilidad, carga y plantas. Interfaces y autoridad operativa." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N03" value="&lt;b&gt;N03 · Diseño conceptual y alternativas&lt;/b&gt;&lt;br&gt;&lt;br&gt;Comparar casco, distribución general y módulos. Especificar calado, desplazamiento, velocidades y capacidad como presupuestos TBD." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N04" value="&lt;b&gt;N04 · CAD y empaquetamiento&lt;/b&gt;&lt;br&gt;&lt;br&gt;Modelar casco, cubiertas, rutas de tuberías/cables, ventilación, acceso y retirada de módulos. EBOM y zonas de mantenimiento." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N05" value="&lt;b&gt;N05 · Hidroestática y estabilidad&lt;/b&gt;&lt;br&gt;&lt;br&gt;Casos de carga, masa/CG, trimado, francobordo e integridad de compartimentos. Evaluar cambios de módulos y consumibles." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N06" value="&lt;b&gt;N06 · Estructura e hidrodinámica&lt;/b&gt;&lt;br&gt;&lt;br&gt;Resistencia/propulsión y esfuerzos globales/locales. Incluir soportes de planta, izado, bloques de dique y cargas de mar." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N07" value="&lt;b&gt;N07 · Potencia y servicios&lt;/b&gt;&lt;br&gt;&lt;br&gt;Balance eléctrico/térmico, agua potable/proceso, frío y residuos. Reservas esenciales y segregación de circuitos." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N08" value="&lt;b&gt;N08 · Diseño para construcción&lt;/b&gt;&lt;br&gt;&lt;br&gt;Bloques de casco, prearmado, penetraciones, tolerancias, soldadura e inspección. Secuencia de montaje y accesibilidad." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N09" value="&lt;b&gt;N09 · Modelos y revisión de diseño&lt;/b&gt;&lt;br&gt;&lt;br&gt;Co-simular navegación, energía y planta. IA compara opciones; arquitectura naval y responsables aprueban diseño y riesgos." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N10" value="&lt;b&gt;N10 · Fabricación de módulos&lt;/b&gt;&lt;br&gt;&lt;br&gt;Trazar materiales, piezas, uniones y pruebas de cada bloque. Equipos y módulos de planta ensayados antes de integración." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N11" value="&lt;b&gt;N11 · Dique e integración final&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aplicar la ruta de dique flotante de página 03. Registrar distribución de cargas, configuración instalada e inspecciones." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="N12" value="&lt;b&gt;N12 · Pruebas y puesta en servicio&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pruebas en seco, puesta a flote y pruebas de puerto/mar escalonadas. Aceptación naval y alimentaria separadas." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="N01" target="N02">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="N02" target="N03">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="N03" target="N04">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="N04" target="N05">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="405" />
+              <mxPoint x="245" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="N05" target="N06">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="N06" target="N07">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="N07" target="N08">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="N08" target="N09">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="245" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="N09" target="N10">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="N10" target="N11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="N11" target="N12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-03" name="03 — Construcción e integración en dique seco flotante">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;03 — Construcción e integración en dique seco flotante" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="Flujo conceptual, no instrucciones de maniobra. Capacidades, apoyos y secuencias dependen del dique/sitio y de sus planes aprobados. Referencia técnica: ABS floating dry docks (ver documentación)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="D01" value="&lt;b&gt;D01 · Seleccionar ruta de construcción&lt;/b&gt;&lt;br&gt;&lt;br&gt;A: ensamblar bloques sobre dique emergido apto. B: recibir casco ya flotable y vararlo. Elegir y aprobar una ruta, sin asumir equivalencia." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D02" value="&lt;b&gt;D02 · Compatibilidad buque–dique&lt;/b&gt;&lt;br&gt;&lt;br&gt;Comprobar envolvente, capacidad de elevación y carga, peso/CG, calado de entrada, profundidad del sitio y condición del dique." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D03" value="&lt;b&gt;D03 · Plan de apoyos y montaje&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ubicar bloques de quilla/laterales y apoyos provisionales sobre estructura resistente. Evaluar reacciones, izados y cada estado de montaje." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D04" value="&lt;b&gt;D04 · Plan de lastre y estabilidad&lt;/b&gt;&lt;br&gt;&lt;br&gt;Evaluar estabilidad y resistencia del dique + buque por fase, superficies libres, niveles, bombas y respuesta a fallos." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D05" value="&lt;b&gt;D05 · Autorizar instalación y maniobra&lt;/b&gt;&lt;br&gt;&lt;br&gt;Operador de dique y equipo naval validan planes, clima, amarres, grúas y exclusión de personal. IA solo verifica/proporciona escenarios." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D06" value="&lt;b&gt;D06 · Preparar dique y servicios&lt;/b&gt;&lt;br&gt;&lt;br&gt;Inspeccionar apoyos, válvulas, bombas, sensores y energía de respaldo. Establecer límites y procedimientos locales aprobados." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D07" value="&lt;b&gt;D07 · Posicionar bloques o casco&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ruta A: izar y alinear módulos. Ruta B: inmersión controlada, entrada/alineación del casco y confirmación de posición." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D08" value="&lt;b&gt;D08 · Soportar y controlar cargas&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ruta B: emerger transfiriendo carga a apoyos. En ambas rutas controlar reacciones, deformación, trimado y variaciones de peso." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D09" value="&lt;b&gt;D09 · Integrar y verificar en seco&lt;/b&gt;&lt;br&gt;&lt;br&gt;Unir casco e instalar propulsión, tuberías, cableado y módulos; inspeccionar uniones y estanqueidad con plan de pruebas." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D10" value="&lt;b&gt;D10 · Gate previo a puesta a flote&lt;/b&gt;&lt;br&gt;&lt;br&gt;Confirmar casco íntegro/flotable, cierres, estado de sistemas, masa/CG y retirada de impedimentos. Resolver no conformidades." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D11" value="&lt;b&gt;D11 · Puesta a flote y salida&lt;/b&gt;&lt;br&gt;&lt;br&gt;Inmersión/lastrado por secuencia aprobada hasta flotación; verificar estanqueidad, trimado y control antes de retirar el buque." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="D12" value="&lt;b&gt;D12 · Pruebas y retorno a dique&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pruebas de puerto/mar y registro as-built. Para mantenimiento o cambio de módulos, recalcular peso, apoyos y límites del siguiente varado." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="D01" target="D02">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="D02" target="D03">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="D03" target="D04">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="D04" target="D05">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="405" />
+              <mxPoint x="245" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="D05" target="D06">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="D06" target="D07">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="D07" target="D08">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="D08" target="D09">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="245" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="D09" target="D10">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="D10" target="D11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="D11" target="D12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-04" name="04 — Ensamblaje naval · automotriz · aeroespacial">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;04 — Ensamblaje naval · automotriz · aeroespacial" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="Instalaciones auto/VTOL: hangar subterráneo, elevador y transferencia a MOAB (páginas 05–06). Un módulo naval no se considera apto para vuelo por similitud." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="A01" value="&lt;b&gt;A01 · Biblioteca común de módulos&lt;/b&gt;&lt;br&gt;&lt;br&gt;IDs, interfaces, tolerancias, masa/CG y variantes. La reutilización necesita evidencia de compatibilidad por dominio." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A02" value="&lt;b&gt;A02 · Naval&lt;/b&gt;&lt;br&gt;&lt;br&gt;Bloques de casco, propulsión, servicios y planta. Acceso, estanqueidad, estabilidad y construcción sobre apoyos/izado." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A03" value="&lt;b&gt;A03 · Mecatrónica automotriz&lt;/b&gt;&lt;br&gt;&lt;br&gt;Chasis, suspensión, frenos/dirección, batería, drive y electrónica. Ergonomía, uniones y pruebas por configuración." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A04" value="&lt;b&gt;A04 · Aeronave anfibia VTOL&lt;/b&gt;&lt;br&gt;&lt;br&gt;Variante solicitada: combinar requisitos de VTOL (CAD-09) y anfibio (CAD-08), sin asumir geometría común. Estructura, lift, flotación y modos necesitan diseño." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A05" value="&lt;b&gt;A05 · Diseño para fabricar/ensamblar&lt;/b&gt;&lt;br&gt;&lt;br&gt;Reducir interferencias, diseñar útiles y acceso a fijaciones, inspección y desmontaje. Planificar tolerancias y acumulación dimensional." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A06" value="&lt;b&gt;A06 · Simulación multidominio&lt;/b&gt;&lt;br&gt;&lt;br&gt;Naval: hidrodinámica. Auto: dinámica/actuación. VTOL: aerodinámica, cargas, flotación y control. Escenarios y modelos calibrados." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A07" value="&lt;b&gt;A07 · CAM y planes de unión&lt;/b&gt;&lt;br&gt;&lt;br&gt;Fabricación aditiva/mecanizado y unión seleccionada por material. Secuencia de operaciones y parámetros aprobados por especialistas." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A08" value="&lt;b&gt;A08 · Recepción e identificación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Verificar material, proveedor, revisión y condición. Seriales y no conformidades antes de incorporar a MBOM." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A09" value="&lt;b&gt;A09 · Subensambles y metrología&lt;/b&gt;&lt;br&gt;&lt;br&gt;Fabricar y medir estructura, mecanismos y equipos. Registrar uniones, calibración y evidencia; segregación de piezas pendientes." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A10" value="&lt;b&gt;A10 · Integración y control&lt;/b&gt;&lt;br&gt;&lt;br&gt;Integrar mecánica, eléctrica, fluidos y software. Verificar cableado, actuadores, aislamiento y consistencia de configuración." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A11" value="&lt;b&gt;A11 · Pruebas progresivas&lt;/b&gt;&lt;br&gt;&lt;br&gt;Bancos, SIL/HIL y pruebas integradas; para VTOL definir gates independientes de agua, tierra y vuelo. Cada gate requiere evidencia." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="A12" value="&lt;b&gt;A12 · Liberación y mantenimiento&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aprobación por responsables del dominio; control as-built, repuestos y reparación. Homologación/aeronavegabilidad pendientes según uso." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="naval" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="A01" target="A02">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="auto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;exitX=0.5;exitY=0;entryX=0.5;entryY=0;" edge="1" parent="1" source="A01" target="A03">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="245" y="130" />
+              <mxPoint x="1145" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="VTOL" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;exitX=0.5;exitY=0;entryX=0.5;entryY=0;" edge="1" parent="1" source="A01" target="A04">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="245" y="130" />
+              <mxPoint x="1595" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="análisis" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="A05" target="A06">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e4" value="plan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="A06" target="A07">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="material" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="A07" target="A08">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="aceptado" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="A08" target="A09">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="245" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="integración" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="A09" target="A10">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e8" value="ensayo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="A10" target="A11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" value="evidencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="A11" target="A12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-05" name="05 — Producción preliminar en hangar subterráneo">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;05 — Producción preliminar en hangar subterráneo" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="Hangar y elevador son infraestructura propuesta, sin dimensiones ni capacidad asignadas. Gate H10 exige evidencia del sitio; IA no gobierna funciones protectoras." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="H01" value="&lt;b&gt;H01 · Requisitos de instalación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Definir proyecto auto/VTOL, dimensiones montadas/desmontadas, masa/CG, turnos y volumen productivo. El edificio tiene su propia línea base." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H02" value="&lt;b&gt;H02 · Diseño del hangar&lt;/b&gt;&lt;br&gt;&lt;br&gt;Geometría, resistencia civil, gálibos, drenaje/inundación, acceso de emergencia, ventilación, incendio y servicios industriales." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H03" value="&lt;b&gt;H03 · Layout y simulación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Celdas, almacenes, rutas, izado y metrología. Simular colisiones, evacuación, recursos y colas; IA propone alternativas." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H04" value="&lt;b&gt;H04 · Recepción y suministro&lt;/b&gt;&lt;br&gt;&lt;br&gt;Identificar piezas, lotes y reservas; inspección previa y logística hacia celdas. Separar baterías/materiales y zonas de riesgo." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H05" value="&lt;b&gt;H05 · Fabricación preliminar&lt;/b&gt;&lt;br&gt;&lt;br&gt;Adición, mecanizado, unión y cableado en celdas autorizadas. Registrar piezas, parámetros de proceso y emisiones/ventilación." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H06" value="&lt;b&gt;H06 · Montaje e inspección&lt;/b&gt;&lt;br&gt;&lt;br&gt;Útiles, alineación, fijaciones y subensambles. Control dimensional y registro as-built; retener desviaciones." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H07" value="&lt;b&gt;H07 · Bancos y pruebas locales&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ensayos eléctricos y de actuadores en bancos aptos. No asumir permiso para vuelo ni propulsión de alto riesgo dentro del hangar." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H08" value="&lt;b&gt;H08 · Gate de transporte&lt;/b&gt;&lt;br&gt;&lt;br&gt;Fijar estado de energía, desactivar funciones de movimiento, plegar/desmontar si procede y asegurar equipos para traslado." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H09" value="&lt;b&gt;H09 · Interfaz de elevador&lt;/b&gt;&lt;br&gt;&lt;br&gt;Verificar masa total con cuna, distribución de carga, gálibo, fijación, recorrido y acceso. No equiparar capacidad nominal con compatibilidad." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H10" value="&lt;b&gt;H10 · Liberar elevación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Equipo de instalación/operador aprueba cargas, puertas/enclavamientos, aislamiento y recuperación ante fallo de energía." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H11" value="&lt;b&gt;H11 · Elevación supervisada&lt;/b&gt;&lt;br&gt;&lt;br&gt;Transportar a superficie mediante sistema validado, con control local y personal autorizado; registrar estado y llegada segura." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="H12" value="&lt;b&gt;H12 · Transporte hacia embarque&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ruta, vehículo/cuna y sujeción aprobados. Verificar infraestructura y centro de transferencia antes de acceso a la plataforma." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="H01" target="H02">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="H02" target="H03">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="H03" target="H04">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="H04" target="H05">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="405" />
+              <mxPoint x="245" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="H05" target="H06">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="H06" target="H07">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="H07" target="H08">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="H08" target="H09">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="245" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="H09" target="H10">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="H10" target="H11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="H11" target="H12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-06" name="06 — Transferencia e integración en plataforma MOAB semisumergible">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;06 — Transferencia e integración en plataforma MOAB semisumergible" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="MOAB CAD-07 es el concepto de referencia; CAD-02/06 son conceptos relacionados, no el mismo activo. Equipos ilustrados no acreditan capacidad ni habilitación de vuelo." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="M01" value="&lt;b&gt;M01 · Definir MOAB y misión&lt;/b&gt;&lt;br&gt;&lt;br&gt;MOAB = Modular Offshore Base según CAD-07 (jfxmbdss). Cubierta aeronáutica, hangar interior y elevador ilustrados; definir sitio, configuración y traslado." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M02" value="&lt;b&gt;M02 · Ingeniería de plataforma&lt;/b&gt;&lt;br&gt;&lt;br&gt;Cubierta, módulos flotantes, hangar y elevador interno: verificar envolvente, cargas, estabilidad/lastre, amarres/posicionamiento y utilidades." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M03" value="&lt;b&gt;M03 · Elegir ruta de transferencia&lt;/b&gt;&lt;br&gt;&lt;br&gt;Comparar rampa/ro-ro, grúa u otra modalidad. No asumir conexión directa hangar–MOAB; diseñar tramo terrestre y marítimo." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M04" value="&lt;b&gt;M04 · Plan de carga y sujeción&lt;/b&gt;&lt;br&gt;&lt;br&gt;Masa/CG con cuna, cargas concentradas, izado/amarre y condición de transporte. Calcular impacto en plataforma y producto." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M05" value="&lt;b&gt;M05 · Simular ventana de operación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Movimientos relativos, viento/oleaje, nivel de agua y restricciones del sitio. Límites medidos y criterios de abortar/recuperar." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M06" value="&lt;b&gt;M06 · Gate de embarque&lt;/b&gt;&lt;br&gt;&lt;br&gt;Autoridad de sitio y plataforma validan estado de máquina, transportador, medios de transferencia y carga; personal fuera de zonas de riesgo." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M07" value="&lt;b&gt;M07 · Transferir y asegurar&lt;/b&gt;&lt;br&gt;&lt;br&gt;Realizar transferencia autorizada; confirmar posición, apoyos y sujeción, inspeccionar daños y actualizar configuración." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M08" value="&lt;b&gt;M08 · Integración final modular&lt;/b&gt;&lt;br&gt;&lt;br&gt;Recibir en hangar/área de integración MOAB; instalar módulos restantes y verificar interfaces. Elevador MOAB → cubierta requiere validación propia." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M09" value="&lt;b&gt;M09 · Elevador MOAB y pruebas estáticas&lt;/b&gt;&lt;br&gt;&lt;br&gt;Validar traslado interno a cubierta: carga, sujeción, gálibos y enclavamientos propios. Metrología, control y SIL/HIL antes de ensayos autorizados." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M10" value="&lt;b&gt;M10 · Pruebas auto / anfibias&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aplicar gates de movimiento terrestre y flotación, frenado, estanqueidad y recuperación, si la plataforma y el entorno lo permiten." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M11" value="&lt;b&gt;M11 · Gate VTOL aire / agua&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ensayos acuáticos y de vuelo separados. Validar estructura, control, masa/CG, modos, área de operación y autoridad aeronáutica competente." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="M12" value="&lt;b&gt;M12 · Entrega o retorno&lt;/b&gt;&lt;br&gt;&lt;br&gt;Registro as-built, aceptación, traslado y mantenimiento. Cambios de módulos o cargas requieren reevaluar transporte y plataforma." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M01" target="M02">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M02" target="M03">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M03" target="M04">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M04" target="M05">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="405" />
+              <mxPoint x="245" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M05" target="M06">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M06" target="M07">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M07" target="M08">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="M08" target="M09">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="245" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M09" target="M10">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M10" target="M11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="M11" target="M12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-07" name="07 — IA, automatización industrial y autoridad">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;07 — IA, automatización industrial y autoridad" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="Alineado con AI-INV, AI-LINE, AI-DSI y los contratos propuestos del README de JFXOSMS. Todo servicio/adaptador sigue siendo arquitectura propuesta." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="I01" value="&lt;b&gt;I01 · Fuentes y configuración&lt;/b&gt;&lt;br&gt;&lt;br&gt;Requisitos, CAD/EBOM, MBOM/recetas, escenarios y mediciones. Versiones, unidades, calidad y derechos de uso." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I02" value="&lt;b&gt;I02 · Copiloto de ingeniería&lt;/b&gt;&lt;br&gt;&lt;br&gt;Recupera fuentes, propone arquitectura, CAD y planes; explica supuestos, incertidumbre y cambios. Revisión humana antes de liberar." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I03" value="&lt;b&gt;I03 · CAS y gemelo digital&lt;/b&gt;&lt;br&gt;&lt;br&gt;Estados observado, simulado y propuesto separados; scenario_id, asset_id, modelo, semilla y snapshot registrados." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I04" value="&lt;b&gt;I04 · AI-INV · materiales&lt;/b&gt;&lt;br&gt;&lt;br&gt;Proponer reservas/reabastecimiento para BOM y recetas. Restricciones duras: stock, caducidad, proveedor y almacenamiento." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I05" value="&lt;b&gt;I05 · AI-LINE · capacidad&lt;/b&gt;&lt;br&gt;&lt;br&gt;Simular y optimizar secuencias/cadencias con recursos, cuellos de botella, calidad y energía. Comparar contra política base." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I06" value="&lt;b&gt;I06 · Coordinador de planes&lt;/b&gt;&lt;br&gt;&lt;br&gt;Reconciliar inventario y capacidad con plan_revision. Detectar inviabilidad; no relajar silenciosamente límites físicos o de calidad." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I07" value="&lt;b&gt;I07 · AI-DSI · decisión humana&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mostrar recomendación, evidencia, riesgos y vigencia. Registrar aprobar/rechazar/revisar por rol autorizado." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I08" value="&lt;b&gt;I08 · MES / órdenes y lotes&lt;/b&gt;&lt;br&gt;&lt;br&gt;Liberar planes aprobados; registrar pieza/lote, consumos, genealogía, receta/MBOM y estado de calidad. Idempotencia y revisión esperada." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I09" value="&lt;b&gt;I09 · Gateway industrial&lt;/b&gt;&lt;br&gt;&lt;br&gt;Traducir órdenes validadas mediante adaptadores versionados a controladores. OPC UA u otro protocolo según máquina elegida." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I10" value="&lt;b&gt;I10 · PLC / robots y protección&lt;/b&gt;&lt;br&gt;&lt;br&gt;Control local, enclavamientos y parada segura según célula. IA/cloud no sustituye funciones protectoras ni modifica libremente recetas críticas." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I11" value="&lt;b&gt;I11 · SCADA y mantenimiento&lt;/b&gt;&lt;br&gt;&lt;br&gt;Alarmas, tendencias y auditoría; calibración y mantenimiento. Calidad del dato y límites de operación antes de usar predicciones." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="I12" value="&lt;b&gt;I12 · Mejora y nueva liberación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Comparar evidencia real, recalibrar y evaluar política candidata en simulación/sombra. Aprobar nueva versión; rollback a base validada." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="fuentes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="I01" target="I02">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="candidato" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="I02" target="I03">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="escenario" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="I03" target="I04">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="materiales" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="I04" target="I06">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="405" />
+              <mxPoint x="695" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="capacidad" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="I05" target="I06">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="propuesta" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="I06" target="I07">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="aprobación" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="I07" target="I08">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="orden" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="I08" target="I09">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="245" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="ejecución" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="I09" target="I10">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" value="eventos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="I10" target="I11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" value="evidencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="I11" target="I12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-08" name="08 — Buque, granjas flotantes y planta alimentaria">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;08 — Buque, granjas flotantes y planta alimentaria" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="Producción propuesta: no se presupone autosuficiencia de granjas flotantes. Dimensionar la planta junto con estabilidad, energía y logística del buque." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="F01" value="&lt;b&gt;F01 · Demanda y perfiles&lt;/b&gt;&lt;br&gt;&lt;br&gt;Definir población humanitaria o misión espacial, composición nutricional, volumen, almacenamiento, agua, envase y distribución." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F02" value="&lt;b&gt;F02 · Granjas verticales flotantes&lt;/b&gt;&lt;br&gt;&lt;br&gt;Suministrar cultivos seleccionados con trazabilidad de agua/nutrientes, cosecha e higiene. Evaluar energía, área, clima y rendimiento." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F03" value="&lt;b&gt;F03 · Soya y trigo&lt;/b&gt;&lt;br&gt;&lt;br&gt;Soya, cereal y germen: cultivo/maduración, separación y rendimiento requieren evaluación; suministro terrestre alternativo registrado." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F04" value="&lt;b&gt;F04 · Miel, leche y huevos&lt;/b&gt;&lt;br&gt;&lt;br&gt;Miel: apicultura propia aprobada o proveedor. Leche: cadena ganadera. Huevos: avicultura. No son productos automáticos de cultivo hidropónico." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F05" value="&lt;b&gt;F05 · Recepción a bordo&lt;/b&gt;&lt;br&gt;&lt;br&gt;Lotes, proveedores, condición, cadena de frío y aceptación. Retener ingredientes no conformes; separar alérgenos y circuitos sucios/limpios." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F06" value="&lt;b&gt;F06 · Planta modular higiénica&lt;/b&gt;&lt;br&gt;&lt;br&gt;Módulos de agua, cereales/proteínas, lácteos/ovo y envasado. Segregación física de taller, soldadura, combustibles y productos químicos." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F07" value="&lt;b&gt;F07 · Agua y servicios&lt;/b&gt;&lt;br&gt;&lt;br&gt;Desalinización + acondicionamiento/seguridad del agua. Circuitos potable/proceso separados de lastre y agua técnica; frío, energía y vapor según diseño." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F08" value="&lt;b&gt;F08 · Recetas y planificación&lt;/b&gt;&lt;br&gt;&lt;br&gt;BOM de ingredientes, unidades, rendimientos, consumos y receta versionada. IA planifica recursos; tecnólogo alimentario aprueba proceso." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F09" value="&lt;b&gt;F09 · Higiene y control de peligros&lt;/b&gt;&lt;br&gt;&lt;br&gt;Buenas prácticas y plan HACCP específico; identificar peligros/CCP donde corresponda. Parámetros y límites requieren validación." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F10" value="&lt;b&gt;F10 · Proceso y envasado&lt;/b&gt;&lt;br&gt;&lt;br&gt;Rutas de página 09; envases compatibles con producto/destino. Limpieza y cambios de línea aprobados; control de contaminación cruzada." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F11" value="&lt;b&gt;F11 · Calidad y liberación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Lote retenido hasta cumplir criterios de inocuidad, nutrición, conservación, etiqueta y envase. Decisión del responsable de calidad." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="F12" value="&lt;b&gt;F12 · Logística y retorno&lt;/b&gt;&lt;br&gt;&lt;br&gt;FEFO, frío cuando aplica, manifiesto y entrega. Rastrear cliente/destino y retirada; residuos/efluentes por circuitos evaluados." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="F01" target="F02">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="F02" target="F03">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="F03" target="F04">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="F04" target="F05">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="405" />
+              <mxPoint x="245" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="F05" target="F06">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="F06" target="F07">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="F07" target="F08">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="F08" target="F09">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="245" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="F09" target="F10">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="F10" target="F11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="F11" target="F12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-09" name="09 — Rutas de agua y productos ovo-lacto-vegetarianos">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;09 — Rutas de agua y productos ovo-lacto-vegetarianos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="P01–P09 son líneas independientes que comparten controles P10–P12. Rutas conceptuales: cada producto necesita proceso, especificación y evidencia propios." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="P01" value="&lt;b&gt;P01 · Agua desalinizada envasada&lt;/b&gt;&lt;br&gt;&lt;br&gt;Captación evaluada → pretratamiento → desalinización seleccionada → acondicionamiento/desinfección validada → control de potabilidad → envasado higiénico." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P02" value="&lt;b&gt;P02 · Barras de cereal&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ingredientes aceptados → formulación nutricional → mezcla/conformado → estabilización seleccionada → envase → lote y verificación de conservación." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P03" value="&lt;b&gt;P03 · Carne de soya / proteína texturizada&lt;/b&gt;&lt;br&gt;&lt;br&gt;Insumo de soya aceptado → formulación/texturización o uso de insumo texturizado → proceso validado → conservación y envase. Declarar soya." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P04" value="&lt;b&gt;P04 · Hamburguesa de gluten&lt;/b&gt;&lt;br&gt;&lt;br&gt;Trigo/gluten trazado → formulación → formado → tratamiento validado → envase/conservación. Producto con gluten, no apto para dieta sin gluten." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P05" value="&lt;b&gt;P05 · Germen de trigo&lt;/b&gt;&lt;br&gt;&lt;br&gt;Cereal trazado → separación/recepción de germen → estabilización validada → protección frente a oxidación → envase. No confundir germen con brotes." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P06" value="&lt;b&gt;P06 · Miel de abeja&lt;/b&gt;&lt;br&gt;&lt;br&gt;Proveedor/apicultura identificada → recepción/control → acondicionamiento autorizado → envasado y trazabilidad. Requisitos específicos según población/destino." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P07" value="&lt;b&gt;P07 · Leche fresca&lt;/b&gt;&lt;br&gt;&lt;br&gt;Leche recibida de cadena ganadera → tratamiento validado → envasado higiénico → cadena de frío y vida útil comprobada. No declarar estabilidad ambiental." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P08" value="&lt;b&gt;P08 · Yogurt probiótico&lt;/b&gt;&lt;br&gt;&lt;br&gt;Leche tratada → cultivo identificado → fermentación controlada → enfriado → envase/frío. Verificar identidad/viabilidad del cultivo y vida útil; sin beneficios inventados." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P09" value="&lt;b&gt;P09 · Productos con huevo&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ingredientes de huevo aceptados → receta → tratamiento validado → protección posproceso → envase/conservación. Declarar huevo y controlar contaminación." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P10" value="&lt;b&gt;P10 · Módulos e instrumentación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Definir balances de masa/energía, equipos, sensores, puntos de muestreo, limpieza y recetas. No asignar tiempos/temperaturas sin validación del producto." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P11" value="&lt;b&gt;P11 · Agua · envase · alérgenos&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ensayos microbiológicos/químicos definidos, hermeticidad y limpieza; segregación/etiquetado de soya, trigo/gluten, leche y huevo según mercado." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="P12" value="&lt;b&gt;P12 · Destino y gate de lote&lt;/b&gt;&lt;br&gt;&lt;br&gt;Humanitario: distribución compatible con conservación. Astronautas: reformulación/proceso/envase y calificación de misión separados (página 10)." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="controles" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="P10" target="P11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="liberación" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="P11" target="P12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-10" name="10 — Calificación humanitaria y alimentaria espacial">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;10 — Calificación humanitaria y alimentaria espacial" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="Referencias: NASA Space Food Systems; FAO GHP/HACCP; WHO desalinated drinking-water. Fuentes y límites de interpretación en docs/ai-modular-design-assembly-process.md." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="Q01" value="&lt;b&gt;Q01 · Especificación común de producto&lt;/b&gt;&lt;br&gt;&lt;br&gt;Definir ración, composición, población, alérgenos, calidad sensorial, envase, conservación y trazabilidad por misión/destino." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q02" value="&lt;b&gt;Q02 · Programa de validación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Establecer peligros, proceso y plan de ensayos; muestreo, laboratorio y criterios aprobados por especialistas antes de fabricar para consumo." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q03" value="&lt;b&gt;Q03 · Ruta humanitaria&lt;/b&gt;&lt;br&gt;&lt;br&gt;Perfil local, agua disponible, cultura alimentaria y preparación. Priorizar productos compatibles con la infraestructura real de distribución." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q04" value="&lt;b&gt;Q04 · Distribución humanitaria&lt;/b&gt;&lt;br&gt;&lt;br&gt;Liberación de lote, FEFO, etiquetas, transporte y frío si necesario; registrar entrega y canal de retirada/retroalimentación." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q05" value="&lt;b&gt;Q05 · Ruta astronautas · requisitos&lt;/b&gt;&lt;br&gt;&lt;br&gt;Autoridad/programa de misión define nutrición, duración, masa/volumen, microgravedad, preparación y tolerancia del envase." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q06" value="&lt;b&gt;Q06 · Reformulación y conservación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Evaluar estabilización, deshidratación/liofilización u otra tecnología según producto. Leche fresca/yogurt refrigerado no se convierten automáticamente en ración espacial." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q07" value="&lt;b&gt;Q07 · Envase y uso en misión&lt;/b&gt;&lt;br&gt;&lt;br&gt;Evaluar cierre, barrera, compatibilidad con rehidratación y preparación; contención de líquidos/partículas y manejo en el entorno previsto." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q08" value="&lt;b&gt;Q08 · Vida útil y nutrición&lt;/b&gt;&lt;br&gt;&lt;br&gt;Ensayar inocuidad, conservación nutricional, textura y aceptabilidad durante condiciones/duración de misión. Límites y duración TBD por programa." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q09" value="&lt;b&gt;Q09 · Yogurt y cultivos candidatos&lt;/b&gt;&lt;br&gt;&lt;br&gt;Si se propone producto fermentado estabilizado, reevaluar viabilidad, calidad y alegaciones; no asumir equivalencia con yogurt fresco." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q10" value="&lt;b&gt;Q10 · Revisión y aceptación de misión&lt;/b&gt;&lt;br&gt;&lt;br&gt;Paquete de ensayos y configuración sometido al programa responsable. Prototipo alimentario naval no implica aceptación para vuelo." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q11" value="&lt;b&gt;Q11 · Producción de lotes calificados&lt;/b&gt;&lt;br&gt;&lt;br&gt;Solo receta/proceso/envase aprobados, control de cambios y genealogía; transporte a integración de misión con condición registrada." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="Q12" value="&lt;b&gt;Q12 · Observación y mejora&lt;/b&gt;&lt;br&gt;&lt;br&gt;Datos de distribución/uso → revisión de receta, envase y logística. Revalidar cambios; mantener retirada y bloqueo de lotes no conformes." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="especificación" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Q01" target="Q02">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="humanitario" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Q02" target="Q03">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="lote apto" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Q03" target="Q04">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="espacial" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="Q02" target="Q05">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="695" y="405" />
+              <mxPoint x="245" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="desarrollo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Q05" target="Q06">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="envase" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Q06" target="Q07">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="ensayos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Q07" target="Q08">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="si aplica" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="Q08" target="Q09">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="245" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="evidencia" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="Q08" target="Q10">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="695" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="aceptación" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Q10" target="Q11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" value="uso" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;dashed=1;" edge="1" parent="1" source="Q04" target="Q12">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="400" />
+              <mxPoint x="1825" y="400" />
+              <mxPoint x="1825" y="700" />
+              <mxPoint x="1595" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="misión" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="Q11" target="Q12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-11" name="11 — Hilo digital, gates y verificación">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;11 — Hilo digital, gates y verificación" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="La misma disciplina de trazabilidad se aplica a piezas y lotes, con criterios distintos. Ver docs/ai-modular-process-verification.csv." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="T01" value="&lt;b&gt;T01 · Necesidad → requisito&lt;/b&gt;&lt;br&gt;&lt;br&gt;mission_id, requirement_id, responsable, criterio y presupuesto. Baseline propuesta: valores/fechas requieren asignación." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T02" value="&lt;b&gt;T02 · Requisito → diseño&lt;/b&gt;&lt;br&gt;&lt;br&gt;asset_id, module_id, CAD_revision e interfaz; EBOM con material, masa y CG. Para alimentos: SKU/ingrediente y receta." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T03" value="&lt;b&gt;T03 · Diseño → industrialización&lt;/b&gt;&lt;br&gt;&lt;br&gt;MBOM_revision, operation_id, fixture_id y process/recipe_revision. Celdas, personas y restricciones del sitio asignadas." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T04" value="&lt;b&gt;T04 · Modelos → decisión&lt;/b&gt;&lt;br&gt;&lt;br&gt;scenario_id, snapshot, policy_version, constraint_revision, recommendation_id y plan_revision. Evidencia de comparación con base." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T05" value="&lt;b&gt;T05 · Decisión → ejecución&lt;/b&gt;&lt;br&gt;&lt;br&gt;Aprobación por rol, vigencia e idempotencia → MES/gateway. Rechazar incompatibilidad de revisión o violación de límites." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T06" value="&lt;b&gt;T06 · Ejecución → genealogía&lt;/b&gt;&lt;br&gt;&lt;br&gt;Serial/lote, insumos, operador, equipo, medición/calibración, uniones/proceso y as-built. Estado observado separado del propuesto." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T07" value="&lt;b&gt;T07 · Gate producto y ensamblaje&lt;/b&gt;&lt;br&gt;&lt;br&gt;Sin interferencias; interfaces y tolerancias verificadas; masa/CG y riesgos aprobados; no conformidades cerradas antes de entrega." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T08" value="&lt;b&gt;T08 · Gate dique y puesta a flote&lt;/b&gt;&lt;br&gt;&lt;br&gt;Compatibilidad, apoyos, carga por fase, estabilidad/lastre y planes aprobados. Registro de pruebas en seco, flotación y puerto/mar." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T09" value="&lt;b&gt;T09 · Gate hangar · elevador · MOAB&lt;/b&gt;&lt;br&gt;&lt;br&gt;Gálibo y carga compatibles, sujeción y ruta validada; plataforma y ventana aprobadas; gates aire/agua/tierra independientes." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T10" value="&lt;b&gt;T10 · Gate alimentario&lt;/b&gt;&lt;br&gt;&lt;br&gt;Plan de higiene/HACCP, agua, proceso, frío/envase y lote conformes. Espacial: aceptación adicional por programa de misión." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T11" value="&lt;b&gt;T11 · Gestión de fallos y cambios&lt;/b&gt;&lt;br&gt;&lt;br&gt;Retener/retrabajar/rechazar; recetas y políticas revertibles; evaluar impacto de cambios sobre montaje, estabilidad y calificación." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="T12" value="&lt;b&gt;T12 · Registro de aceptación&lt;/b&gt;&lt;br&gt;&lt;br&gt;Matriz complementaria de 20 requisitos de proceso, métodos y evidencias previstas. No se reportan equipos desplegados ni ensayos superados." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="T01" target="T02">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="T02" target="T03">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="T03" target="T04">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="T04" target="T05">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="405" />
+              <mxPoint x="245" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="T05" target="T06">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="T06" target="T07">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="T07" target="T08">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="T08" target="T09">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1595" y="690" />
+              <mxPoint x="245" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="T09" target="T10">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="T10" target="T11">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#486581;fontSize=12;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="T11" target="T12">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="osms-process-12" name="12 — Trazabilidad a conceptos CAD del portafolio">
+    <mxGraphModel dx="1840" dy="1140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1840" pageHeight="1140" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;JFXOSMS · Diseño modular asistido por IA para ensamblaje y procesos&lt;/b&gt;&lt;br&gt;12 — Trazabilidad a conceptos CAD del portafolio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d7e6fa;strokeColor=#64748b;fontFamily=Helvetica;fontSize=21;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="25" width="1760" height="90" />
+        </mxCell>
+        <mxCell id="note" value="No se copian imágenes al repositorio JFXOSMS: se enlazan a sus proyectos propietarios y se registra su identidad. Arquitectura propuesta, no informe de implementación." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3f5f8;strokeColor=#64748b;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1030" width="1760" height="65" />
+        </mxCell>
+        <mxCell id="C01" value="&lt;b&gt;C01 · CAD-01 · jfxotbs · hangar&lt;/b&gt;&lt;br&gt;&lt;br&gt;Hangar subterráneo: plataforma elevadora, taller, ventilación, sensores y energía. Fuente de H01–H12; capacidades por diseñar." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C02" value="&lt;b&gt;C02 · CAD-02 · jfxotbs · aeropuerto&lt;/b&gt;&lt;br&gt;&lt;br&gt;Mega aeropuerto flotante modular con cubierta y soportes. Referencia relacionada para modularidad/operación; no identifica por sí sola el mismo activo MOAB." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C03" value="&lt;b&gt;C03 · CAD-03 · jfxfmis · granja multinivel&lt;/b&gt;&lt;br&gt;&lt;br&gt;Cultivos verticales, frío, cosecha/logística, recirculación y desalación opcional. Fuente de F02/F05/F07; rendimiento no validado." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C04" value="&lt;b&gt;C04 · CAD-04 · jfxfmis · isla agrícola&lt;/b&gt;&lt;br&gt;&lt;br&gt;Cajones modulares, agricultura aterrazada/invernaderos, tratamiento de agua y energía. Fuente de interfaces granja–buque." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="155" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C05" value="&lt;b&gt;C05 · CAD-05 · jfxfmis · blue economy&lt;/b&gt;&lt;br&gt;&lt;br&gt;Terminal/pista, amarres y corredor de buque de apoyo; muestra cadena marina. Su acuicultura no se integra al catálogo ovo-lacto-vegetariano." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C06" value="&lt;b&gt;C06 · CAD-06 · jfxai4bss · plataforma&lt;/b&gt;&lt;br&gt;&lt;br&gt;Concepto de plataforma offshore de doble casco/semisumergible: módulos, energía, control, helipuerto y grúa. Referencia de cargas/servicios; no expandirlo a MOAB sin decisión." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C07" value="&lt;b&gt;C07 · CAD-07 · jfxmbdss · MOAB&lt;/b&gt;&lt;br&gt;&lt;br&gt;Texto explícito: Modular Offshore Base. Cubierta aeronáutica, módulos de flotación, hangar interior y elevador ilustrados. Referencia principal de M01–M12." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C08" value="&lt;b&gt;C08 · CAD-08 · jfxmbdss · anfibio&lt;/b&gt;&lt;br&gt;&lt;br&gt;Transporte anfibio: fuselaje modular, alas/propulsión, flotadores, almacenamiento H2, fuel-cell y batería. No demuestra VTOL." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="440" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C09" value="&lt;b&gt;C09 · CAD-09 · jfxotbs · VTOL&lt;/b&gt;&lt;br&gt;&lt;br&gt;Pegasus: lift fans, propulsión de crucero, energía LH2, aviónica y bahía de misión. No demuestra flotación propia. Variante anfibia VTOL requiere integración independiente." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C10" value="&lt;b&gt;C10 · Límites de interpretación&lt;/b&gt;&lt;br&gt;&lt;br&gt;JPEGs conceptuales, no modelos dimensionados. No inferir masa, tamaño, capacidades, rendimiento, patente libre ni certificación desde imágenes." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C11" value="&lt;b&gt;C11 · Contratos entre proyectos&lt;/b&gt;&lt;br&gt;&lt;br&gt;IDs/configuración separados para hangar, elevadores, MOAB, buque, dique y granjas. Registrar cargas y entregas; no asumir emplazamiento ni geometría compartidos." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="940" y="725" width="410" height="220" />
+        </mxCell>
+        <mxCell id="C12" value="&lt;b&gt;C12 · Fuentes auditables&lt;/b&gt;&lt;br&gt;&lt;br&gt;docs/modular-process-cad-sources.json: commits y blob SHA de nueve referencias revisadas. Documentación: enlaces fijados a revisión y matriz de aplicación." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fb;strokeColor=#64748b;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1390" y="725" width="410" height="220" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

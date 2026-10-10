@@ -14,6 +14,12 @@ The proposed result connects engineering models, production scenarios, material 
 
 > Microfactory engineering and simulation platform integrating digital twins, inventory optimization, manufacturing-line policies, and operator decision support through modular services and reproducible AI evaluation.
 
+## Modular design and assembly process
+
+[Editable end-to-end Drawio diagram](MBSE/CAS/Drawio/JFXOSMS_AI_Assisted_Modular_Design_Assembly_End_to_End.drawio) · [Process guide and CAD sources](docs/ai-modular-design-assembly-process.md) · [Process verification register](docs/ai-modular-process-verification.csv).
+
+The proposed workflow covers AI-assisted MBSE/CAD/CAM/CAS, naval and automotive/aerospace assembly, industrial automation, multipurpose-vessel construction in a floating dry dock, underground-hangar production with an elevator, transfer and integration on the MOAB semi-submersible concept, and modular food/water processing for humanitarian and space-mission qualification. Twelve Spanish-language diagram pages link the process to nine CAD references from jfxotbs, jfxfmis, jfxai4bss and jfxmbdss. Infrastructure capacities, engineering evidence and food/flight approvals remain pending; this is a design proposal.
+
 ## Table of Contents
 
 - [1. Project purpose and engineering lifecycle](#project-purpose)
