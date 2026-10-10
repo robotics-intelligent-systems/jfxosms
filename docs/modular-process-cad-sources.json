@@ -1,0 +1,86 @@
+{
+  "jfxosms_source_commit": "0b50b67b25e4fa82991cd05429240813b7b4eee5",
+  "sources": [
+    {
+      "repo": "jfxotbs",
+      "path": "MBSE/CAD/modular-underground-hangar-digital-twin.jpg",
+      "blob_sha": "2236c2b1472f3e8d57249be03f192ca64571d81b",
+      "url": "https://raw.githubusercontent.com/robotics-intelligent-systems/jfxotbs/main/MBSE/CAD/modular-underground-hangar-digital-twin.jpg",
+      "source_id": "CAD-01",
+      "source_commit": "42918ec74a33107517e7275cd853342e111ab78a",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxotbs/blob/42918ec74a33107517e7275cd853342e111ab78a/MBSE/CAD/modular-underground-hangar-digital-twin.jpg"
+    },
+    {
+      "repo": "jfxotbs",
+      "path": "MBSE/CAD/open-modular-mega-floating-airport.jpg",
+      "blob_sha": "bb5ffe5edfb775306679606fdbfacd2b52f90ea2",
+      "url": "https://raw.githubusercontent.com/robotics-intelligent-systems/jfxotbs/main/MBSE/CAD/open-modular-mega-floating-airport.jpg",
+      "source_id": "CAD-02",
+      "source_commit": "42918ec74a33107517e7275cd853342e111ab78a",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxotbs/blob/42918ec74a33107517e7275cd853342e111ab78a/MBSE/CAD/open-modular-mega-floating-airport.jpg"
+    },
+    {
+      "repo": "jfxfmis",
+      "path": "MBSE/CAD/Overall-3D-view-of-the-Proposed-Multi-level-Floating-Farm-MFF.jpg",
+      "blob_sha": "d135c4ea33681a1b32c50fcd91bd6e34f6434357",
+      "url": "https://raw.githubusercontent.com/robotics-intelligent-systems/jfxfmis/main/MBSE/CAD/Overall-3D-view-of-the-Proposed-Multi-level-Floating-Farm-MFF.jpg",
+      "source_id": "CAD-03",
+      "source_commit": "84aa99b5687758cf839b3bc21a1af6fd72715e5b",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxfmis/blob/84aa99b5687758cf839b3bc21a1af6fd72715e5b/MBSE/CAD/Overall-3D-view-of-the-Proposed-Multi-level-Floating-Farm-MFF.jpg"
+    },
+    {
+      "repo": "jfxfmis",
+      "path": "MBSE/CAD/modular-floating-farm-island-digital-twin.jpg",
+      "blob_sha": "ba5d01e3adb3d633a4c1ad048d4c1254bf996784",
+      "url": "https://raw.githubusercontent.com/robotics-intelligent-systems/jfxfmis/main/MBSE/CAD/modular-floating-farm-island-digital-twin.jpg",
+      "source_id": "CAD-04",
+      "source_commit": "84aa99b5687758cf839b3bc21a1af6fd72715e5b",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxfmis/blob/84aa99b5687758cf839b3bc21a1af6fd72715e5b/MBSE/CAD/modular-floating-farm-island-digital-twin.jpg"
+    },
+    {
+      "repo": "jfxfmis",
+      "path": "MBSE/CAD/offshore-blue-economy-open-source-digital-twins-concept-v1.jpg",
+      "blob_sha": "c21e38ae0b3b375f8dd0d3e223242b403307e864",
+      "url": "https://raw.githubusercontent.com/robotics-intelligent-systems/jfxfmis/main/MBSE/CAD/offshore-blue-economy-open-source-digital-twins-concept-v1.jpg",
+      "source_id": "CAD-05",
+      "source_commit": "84aa99b5687758cf839b3bc21a1af6fd72715e5b",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxfmis/blob/84aa99b5687758cf839b3bc21a1af6fd72715e5b/MBSE/CAD/offshore-blue-economy-open-source-digital-twins-concept-v1.jpg"
+    },
+    {
+      "repo": "jfxai4bss",
+      "path": "MBSE/CAD/self-propelled-twin-hulled-semi-submersible-platform.jpg",
+      "blob_sha": "40f1c02fd52c3ff8c34d2b0d162f1533e24d515c",
+      "url": "https://raw.githubusercontent.com/robotics-intelligent-systems/jfxai4bss/main/MBSE/CAD/self-propelled-twin-hulled-semi-submersible-platform.jpg",
+      "source_id": "CAD-06",
+      "source_commit": "b1ec2ef9f8d5287c26aa1c3b5aec62bfd4e85c42",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxai4bss/blob/b1ec2ef9f8d5287c26aa1c3b5aec62bfd4e85c42/MBSE/CAD/self-propelled-twin-hulled-semi-submersible-platform.jpg"
+    },
+    {
+      "repo": "jfxmbdss",
+      "path": "MBSE/CAD/mobile-offshore-base-digital-twin.jpg",
+      "blob_sha": "78e1a6d71a7eda88df4a830f57cbb8c202b56105",
+      "url": "https://raw.githubusercontent.com/robotics-intelligent-systems/jfxmbdss/main/MBSE/CAD/mobile-offshore-base-digital-twin.jpg",
+      "source_id": "CAD-07",
+      "source_commit": "7075e95c6eea70b66dbd6a39edce18229cbd1f5e",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxmbdss/blob/7075e95c6eea70b66dbd6a39edce18229cbd1f5e/MBSE/CAD/mobile-offshore-base-digital-twin.jpg"
+    },
+    {
+      "repo": "jfxmbdss",
+      "path": "MBSE/CAD/hydrogen-hybrid-amphibious-transport-concept.jpg",
+      "blob_sha": "a5cbde6e48ab9ac49b0536948fe98b7357a92271",
+      "url": "https://raw.githubusercontent.com/robotics-intelligent-systems/jfxmbdss/main/MBSE/CAD/hydrogen-hybrid-amphibious-transport-concept.jpg",
+      "source_id": "CAD-08",
+      "source_commit": "7075e95c6eea70b66dbd6a39edce18229cbd1f5e",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxmbdss/blob/7075e95c6eea70b66dbd6a39edce18229cbd1f5e/MBSE/CAD/hydrogen-hybrid-amphibious-transport-concept.jpg"
+    },
+    {
+      "repo": "jfxotbs",
+      "path": "MBSE/CAD/OpenTwin_VTOL_Rescue_LH2_Cutaway_Concept_v1.jpg",
+      "blob_sha": "116b73d159f80957db7024ca2e3e8e43df0b65db",
+      "url": "https://raw.githubusercontent.com/robotics-intelligent-systems/jfxotbs/main/MBSE/CAD/OpenTwin_VTOL_Rescue_LH2_Cutaway_Concept_v1.jpg",
+      "source_id": "CAD-09",
+      "source_commit": "42918ec74a33107517e7275cd853342e111ab78a",
+      "reference_url": "https://github.com/robotics-intelligent-systems/jfxotbs/blob/42918ec74a33107517e7275cd853342e111ab78a/MBSE/CAD/OpenTwin_VTOL_Rescue_LH2_Cutaway_Concept_v1.jpg"
+    }
+  ]
+}
