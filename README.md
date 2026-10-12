@@ -12,7 +12,7 @@ The proposed result connects engineering models, production scenarios, material 
 
 **Suggested short project description**
 
-> Modular microfactory, floating-dock engineering architecture connecting SysML requirements, AI-assisted simulation, digital twins, manufacturing planning and operator decision support; implementation and validation pending.
+> Modular microfactory, floating-dock and offshore support-infrastructure engineering architecture connecting SysML requirements, AI-assisted simulation, digital twins, manufacturing planning and operator decision support; implementation and validation pending.
 
 ## Floating dry dock transferred from JFXAI4MOMS
 
@@ -20,7 +20,17 @@ The proposed result connects engineering models, production scenarios, material 
 
 JFXOSMS now maintains the floating dry dock concept for vessel construction/repair, equipment support, modular production and logistics. JFXAI4MOMS references this infrastructure for mining-equipment maintenance. The original JPG is preserved byte for byte.
 
-The dock is a visual study with no verified dimensions, lifting capacity or stability evidence. It complements Plant S without establishing a medium/large size class. The offshore platform remains a separate second-review transfer.
+The dock is a visual study with no verified dimensions, lifting capacity or stability evidence. It complements Plant S without establishing a medium/large size class. The self-elevating offshore platform is documented separately below; neither concept has validated operating capacity.
+
+## Self-elevating offshore platform transferred from JFXAI4MOMS
+
+![Self-elevating offshore platform concept](MBSE/CAD/offshore-platform-concept.jpg)
+
+[Scope, simulation proposals and source provenance](docs/transferred-offshore-infrastructure-concepts.md#self-elevating-offshore-platform).
+
+The original JPG is preserved byte for byte. JFXOSMS owns the infrastructure concept: working deck, jack-up legs, equipment handling, utilities and modular production/support interfaces. JFXAI4MOMS retains mining/geological missions and references this infrastructure externally.
+
+The floating transport and elevated working modes require separate analysis. Water depth, seabed bearing, leg/jacking loads, handling capacity and installation conditions remain site-specific engineering tasks. The image does not establish a deep-ocean foundation, a certified helideck or a medium/large Plant S design. No physics simulation or capacity acceptance is claimed.
 
 ## Small modular floating dock · Plant S
 
