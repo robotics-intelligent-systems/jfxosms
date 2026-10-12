@@ -85,3 +85,7 @@ Las referencias técnicas siguientes orientan la definición del trabajo de vali
 | CAD-07 | [jfxmbdss / mobile-offshore-base-digital-twin.jpg](https://github.com/robotics-intelligent-systems/jfxmbdss/blob/7075e95c6eea70b66dbd6a39edce18229cbd1f5e/MBSE/CAD/mobile-offshore-base-digital-twin.jpg) | MOAB, hangar interior y elevador |
 | CAD-08 | [jfxmbdss / hydrogen-hybrid-amphibious-transport-concept.jpg](https://github.com/robotics-intelligent-systems/jfxmbdss/blob/7075e95c6eea70b66dbd6a39edce18229cbd1f5e/MBSE/CAD/hydrogen-hybrid-amphibious-transport-concept.jpg) | Transporte anfibio de referencia |
 | CAD-09 | [jfxotbs / OpenTwin_VTOL_Rescue_LH2_Cutaway_Concept_v1.jpg](https://github.com/robotics-intelligent-systems/jfxotbs/blob/42918ec74a33107517e7275cd853342e111ab78a/MBSE/CAD/OpenTwin_VTOL_Rescue_LH2_Cutaway_Concept_v1.jpg) | VTOL Pegasus de referencia |
+
+## Concepto suplementario de microfábrica flotante
+
+La [arquitectura modular de planta flotante](floating-microfactory-modular-architecture.md) traduce el TXT adicional y conserva los tres niveles, el flujo de producción y las cuatro capas de software. Distingue esta propuesta del dique flotante y de otros activos del proceso; estabilidad, energía, calidad bajo movimiento y certificación requieren evidencia específica. Véase el [índice y registro de migración](README.md).
