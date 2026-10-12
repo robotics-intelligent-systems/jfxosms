@@ -6,7 +6,7 @@ JFXOSMS owns this illustration and its proposed manufacturing/infrastructure stu
 
 ### Floating Dry Dock
 
-![OpenTwin floating dry dock concept](MBSE/CAD/floating-dry-dock-concept.jpg)
+![OpenTwin floating dry dock concept](../MBSE/CAD/floating-dry-dock-concept.jpg)
 
 The concept combines a modular dock deck, side structures, cranes, keel blocks and supports, ballast systems, utilities and an operations station. Its proposed twin would represent dock configuration, supported vessel geometry, ballast state, maintenance tasks, lifting resources and environmental observations.
 
