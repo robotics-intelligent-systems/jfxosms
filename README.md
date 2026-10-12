@@ -12,15 +12,20 @@ The proposed result connects engineering models, production scenarios, material 
 
 **Suggested short project description**
 
-> Modular microfactory, floating-dock engineering architecture connecting SysML requirements, AI-assisted simulation, digital twins, manufacturing planning and operator decision support; implementation and validation pending.
+> Modular microfactory, floating-dock and offshore support-infrastructure engineering architecture connecting SysML requirements, AI-assisted simulation, digital twins, manufacturing planning and operator decision support; implementation and validation pending.
 
-## Floating dry dock transferred from JFXAI4MOMS
+## Offshore support infrastructure concepts
 
-[Concept scope and provenance](docs/transferred-offshore-infrastructure-concepts.md) · [Original CAD illustration](MBSE/CAD/floating-dry-dock-concept.jpg).
+[Transferred concept documentation and provenance](docs/transferred-offshore-infrastructure-concepts.md).
 
-JFXOSMS now maintains the floating dry dock concept for vessel construction/repair, equipment support, modular production and logistics. JFXAI4MOMS references this infrastructure for mining-equipment maintenance. The original JPG is preserved byte for byte.
+JFXOSMS now maintains the **floating dry dock** and **self-elevating offshore platform** concepts previously cataloged under JFXAI4MOMS. They extend the infrastructure studies for modular vessel construction/repair, equipment handling, mechatronic integration and manufacturing logistics. JFXAI4MOMS remains the mining/geological domain owner and references these assets as optional support infrastructure.
 
-The dock is a visual study with no verified dimensions, lifting capacity or stability evidence. It complements Plant S without establishing a medium/large size class. The offshore platform remains a separate second-review transfer.
+| Concept | Visual | Proposed engineering scope |
+| --- | --- | --- |
+| Floating dry dock | [CAD illustration](MBSE/CAD/floating-dry-dock-concept.jpg) | Vessel support, structure, ballast, stability and workshop/logistics interfaces. |
+| Self-elevating offshore platform | [CAD illustration](MBSE/CAD/offshore-platform-concept.jpg) | Separate floating-transport and elevated-operation cases, leg/jacking loads, utilities and site-specific seabed conditions. |
+
+These are unvalidated visual concepts. They do not establish medium/large Plant S variants, capacity, offshore approval or an integrated mining facility. Proposed SysML-to-simulation adapters remain subject to review; the two original JPG files are preserved unchanged.
 
 ## Small modular floating dock · Plant S
 
