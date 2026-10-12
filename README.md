@@ -14,6 +14,12 @@ The proposed result connects engineering models, production scenarios, material 
 
 > Microfactory engineering and simulation platform integrating digital twins, inventory optimization, manufacturing-line policies, and operator decision support through modular services and reproducible AI evaluation.
 
+## Floating microfactory supplemental concept
+
+[Modular floating-plant architecture](docs/floating-microfactory-modular-architecture.md) · [Documentation index and migration register](docs/README.md).
+
+The supplemental concept adds three-level zoning, additive/robotic production cells and a proposed digital-twin stack. Sheltered/offshore operation, renewable DP, vibration tolerance and certification remain engineering objectives requiring evidence.
+
 ## Modular design and assembly process
 
 [Editable end-to-end Drawio diagram](MBSE/CAS/Drawio/JFXOSMS_AI_Assisted_Modular_Design_Assembly_End_to_End.drawio) · [Process guide and CAD sources](docs/ai-modular-design-assembly-process.md) · [Process verification register](docs/ai-modular-process-verification.csv).
