@@ -12,7 +12,15 @@ The proposed result connects engineering models, production scenarios, material 
 
 **Suggested short project description**
 
-> Modular microfactory and floating-dock engineering architecture connecting SysML requirements, AI-assisted simulation, digital twins, manufacturing planning and operator decision support; implementation and validation pending.
+> Modular microfactory, floating-dock engineering architecture connecting SysML requirements, AI-assisted simulation, digital twins, manufacturing planning and operator decision support; implementation and validation pending.
+
+## Floating dry dock transferred from JFXAI4MOMS
+
+[Concept scope and provenance](docs/transferred-offshore-infrastructure-concepts.md) · [Original CAD illustration](MBSE/CAD/floating-dry-dock-concept.jpg).
+
+JFXOSMS now maintains the floating dry dock concept for vessel construction/repair, equipment support, modular production and logistics. JFXAI4MOMS references this infrastructure for mining-equipment maintenance. The original JPG is preserved byte for byte.
+
+The dock is a visual study with no verified dimensions, lifting capacity or stability evidence. It complements Plant S without establishing a medium/large size class. The offshore platform remains a separate second-review transfer.
 
 ## Small modular floating dock · Plant S
 
