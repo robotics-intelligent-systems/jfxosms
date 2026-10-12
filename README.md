@@ -1,6 +1,6 @@
 # JFXOSMS — Open Microfactory Simulation and AI Decision Architecture
 
-**Consolidated English proposal · Revision: 2026-09-15**
+**Consolidated proposal · Small floating-dock requirements update: 2026-10-12**
 
 **Project:** [robotics-intelligent-systems/jfxosms][jfxosms]
 
@@ -12,7 +12,19 @@ The proposed result connects engineering models, production scenarios, material 
 
 **Suggested short project description**
 
-> Microfactory engineering and simulation platform integrating digital twins, inventory optimization, manufacturing-line policies, and operator decision support through modular services and reproducible AI evaluation.
+> Modular microfactory and floating-dock engineering architecture connecting SysML requirements, AI-assisted simulation, digital twins, manufacturing planning and operator decision support; implementation and validation pending.
+
+## Small modular floating dock · Plant S
+
+![Plant S visual concept](MBSE/CAD/jfxosms-small-modular-floating-dock-digital-twin-concept-v1.jpg)
+
+[High-level technical requirements](docs/requirements/small-floating-dock-high-level-specification.md) · [Editable requirements and architecture Drawio](MBSE/CAS/Drawio/JFXOSMS_Small_Floating_Dock_High_Level_Requirements.drawio).
+
+The approved visual concept proposes a 24 × 16 m sheltered-water dock with an 18 × 6 m well, for an initial vessel envelope of 12 × 4 m and 1.2 m draft. These are design assumptions, not verified dock capacity. Twelve proposed requirements cover naval loading, module connections, production quality, protected controls, energy, amphibious-trailer logistics and traceable digital-twin evidence.
+
+Interchangeable workshops support drone and mechatronic assembly; motorcycles and sports cars require individual handling/load checks. AI-assisted extraction from SysML/Drawio is reviewed before deterministic model generation. Proposed free-software routes use FreeCAD, Gazebo/ROS 2 and OpenModelica; no physics simulation or naval acceptance is claimed.
+
+**Next:** OSMS-S-PILOT-001 — version the nominal parameter contract and execute a labelled synthetic access/transfer fixture. Architecture maturity remains ~20%; medium and large plants are future stages.
 
 ## Floating microfactory supplemental concept
 
@@ -658,3 +670,4 @@ The SDK2035 packages identify these Microsoft parent repositories, marked archiv
 [gymnasium-license]: https://github.com/Farama-Foundation/Gymnasium/blob/main/LICENSE
 [sb3]: https://github.com/DLR-RM/stable-baselines3
 [sb3-license]: https://github.com/DLR-RM/stable-baselines3/blob/master/LICENSE
+
