@@ -1,6 +1,6 @@
 # Documentation index
 
-- [Transferred offshore infrastructure concepts](transferred-offshore-infrastructure-concepts.md) — floating dry dock; first transfer review, source history and project boundaries.
+- [Transferred offshore infrastructure concepts](transferred-offshore-infrastructure-concepts.md) — floating dry dock and jack-up platform; source history and project boundaries.
 
 - [Plant S high-level requirements](requirements/small-floating-dock-high-level-specification.md) — twelve proposed requirements, six interface contracts, operating states and acceptance evidence.
 - [Plant S editable Drawio](../MBSE/CAS/Drawio/JFXOSMS_Small_Floating_Dock_High_Level_Requirements.drawio) — six views; SysML-inspired documentation, not an executable model.
