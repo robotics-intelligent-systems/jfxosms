@@ -6,7 +6,7 @@ JFXOSMS owns these two infrastructure illustrations and their proposed manufactu
 
 ### Floating Dry Dock
 
-![OpenTwin floating dry dock concept](MBSE/CAD/floating-dry-dock-concept.jpg)
+![OpenTwin floating dry dock concept](../MBSE/CAD/floating-dry-dock-concept.jpg)
 
 The concept combines a modular dock deck, side structures, cranes, keel blocks and supports, ballast systems, utilities and an operations station. Its proposed twin would represent dock configuration, supported vessel geometry, ballast state, maintenance tasks, lifting resources and environmental observations.
 
@@ -14,7 +14,7 @@ For JFXOSMS, the dock is an infrastructure concept for vessel construction/repai
 
 ### Self-Elevating Offshore Platform
 
-![OpenTwin self-elevating offshore platform concept](MBSE/CAD/offshore-platform-concept.jpg)
+![OpenTwin self-elevating offshore platform concept](../MBSE/CAD/offshore-platform-concept.jpg)
 
 The platform depicts a modular deck supported by jack-up legs, handling cranes, a helideck, accommodation, utilities and subsea access. Its twin would track leg/deck configuration, equipment readiness, crane tasks, utility demand and local environmental conditions.
 
